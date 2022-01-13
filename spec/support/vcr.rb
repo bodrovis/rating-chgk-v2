@@ -6,5 +6,5 @@ VCR.configure do |c|
   c.ignore_hosts 'codeclimate.com'
   c.hook_into :faraday
   c.cassette_library_dir = File.join(File.dirname(__FILE__), '..', 'fixtures', 'vcr_cassettes')
-  c.filter_sensitive_data('<API_TOKEN>') { ENV.fetch('API_TOKEN') {'fake'} }
+  c.filter_sensitive_data('<API_TOKEN>') { ENV.fetch('API_TOKEN', 'fake') }
 end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../models/player_model'
 
 module RatingChgkV2
@@ -7,9 +9,14 @@ module RatingChgkV2
 
       MODEL = 'Player'
 
-      def initialize(endpoint)
+      def initialize(endpoint, raw_data)
         @endpoint = endpoint
-        @items = produce_models_from endpoint.call
+        @items = produce_models_from raw_data
+      end
+
+      def next_page
+        new_endpoint = @endpoint.recreate_with page: (@endpoint.params[:page] + 1)
+        self.class.new new_endpoint, new_endpoint.do_get
       end
 
       private

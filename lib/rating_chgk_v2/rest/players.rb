@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../collections/players_collection'
 require_relative '../endpoints/players_endpoint'
 
@@ -6,12 +8,12 @@ module RatingChgkV2
     module Players
       def players(params = {})
         endpoint = RatingChgkV2::Endpoints::PlayersEndpoint.new(self, :players, params)
-        RatingChgkV2::Collections::PlayersCollection.new endpoint
+        RatingChgkV2::Collections::PlayersCollection.new endpoint, endpoint.do_get
       end
 
       def player(id)
         RatingChgkV2::Endpoints::PlayersEndpoint.new self, [:players, id]
-        #get "players/#{id}"
+        # get "players/#{id}"
       end
 
       def player_seasons(id, params = {})

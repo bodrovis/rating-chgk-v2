@@ -1,4 +1,6 @@
-require "addressable/template"
+# frozen_string_literal: true
+
+require 'addressable/template'
 
 require_relative '../request'
 
@@ -7,15 +9,20 @@ module RatingChgkV2
     class PlayersEndpoint
       include RatingChgkV2::Request
 
-      def initialize(client, query_params = [], params = {})
-        query_params = [query_params] unless query_params.is_a?(Array)
-        @uri = partial_uri(query_params)
+      attr_reader :params
 
+      def initialize(client, query_params = [], params = {})
+        @query_params = query_params.is_a?(Array) ? query_params : [query_params]
+        @uri = partial_uri(@query_params)
         @client = client
         @params = params
       end
 
-      def call
+      def recreate_with(new_params)
+        self.class.new @client, @query_params, @params.merge(new_params)
+      end
+
+      def do_get
         get @uri, @client, @params
       end
 

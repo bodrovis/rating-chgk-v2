@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'yaml'
 
 module RatingChgkV2
@@ -6,7 +8,7 @@ module RatingChgkV2
       def initialize(data)
         attrs = YAML.load_file File.expand_path('../data/player.yaml', __dir__)
         attrs.each do |att|
-          next unless data.has_key?(att)
+          next unless data.key?(att)
 
           self.class.class_exec do
             attr_reader(att)

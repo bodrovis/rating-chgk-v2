@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.rating.chgk.net/players?itemsPerPage=3&page=3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - rating-chgk-v2 gem/1.0.0.alpa1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.14.0 (Ubuntu)
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      vary:
+      - Accept
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - deny
+      cache-control:
+      - no-cache, private
+      date:
+      - Thu, 13 Jan 2022 20:33:46 GMT
+      link:
+      - <https://api.rating.chgk.net/docs.jsonld>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"
+      etag:
+      - '"ef3cdc32a266cd4d0c8352dbec6ec329"'
+    body:
+      encoding: UTF-8
+      string: '[{"id":15,"name":"Олег","patronymic":"Игоревич","surname":"Абарников"},{"id":16,"name":"Азер","patronymic":"Абасали
+        оглы","surname":"Абасалиев"},{"id":17,"name":"А.","patronymic":"В.","surname":"Абасев"}]'
+  recorded_at: Thu, 13 Jan 2022 20:33:47 GMT
+recorded_with: VCR 6.0.0
