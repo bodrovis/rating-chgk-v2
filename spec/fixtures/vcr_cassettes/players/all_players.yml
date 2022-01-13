@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.rating.chgk.net/players
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - rating-chgk-v2 gem/1.0.0.alpa1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.14.0 (Ubuntu)
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      vary:
+      - Accept
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - deny
+      cache-control:
+      - no-cache, private
+      date:
+      - Thu, 13 Jan 2022 18:27:55 GMT
+      link:
+      - <https://api.rating.chgk.net/docs.jsonld>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"
+      etag:
+      - '"23e7c771ef5fceeec8d203868d13bad5"'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3siaWQiOjEsIm5hbWUiOiLQkNC70LXQutGB0LXQuSIsInBhdHJvbnltaWMiOm51bGwsInN1cm5hbWUiOiLQkNCx0LDQsdC40LvQvtCyIn0seyJpZCI6MTAsIm5hbWUiOiLQmNCz0L7RgNGMIiwicGF0cm9ueW1pYyI6IiIsInN1cm5hbWUiOiLQkNCx0LDQu9C+0LIifSx7ImlkIjoxMSwibmFtZSI6ItCd0LDRgtCw0LvRjNGPIiwicGF0cm9ueW1pYyI6ItCu0YDRjNC10LLQvdCwIiwic3VybmFtZSI6ItCQ0LHQsNC70YvQvNC+0LLQsCJ9LHsiaWQiOjEyLCJuYW1lIjoi0JDRgNGC0YPRgCIsInBhdHJvbnltaWMiOiLQldCy0LPQtdC90YzQtdCy0LjRhyIsInN1cm5hbWUiOiLQkNCx0LDQu9GM0Y/QvSJ9LHsiaWQiOjEzLCJuYW1lIjoi0K3RgNC40LoiLCJwYXRyb255bWljIjoi0JXQstCz0LXQvdGM0LXQstC40YciLCJzdXJuYW1lIjoi0JDQsdCw0LvRjNGP0L0ifSx7ImlkIjoxNCwibmFtZSI6ItCS0LDRgdC40LvQuNC5IiwicGF0cm9ueW1pYyI6IiIsInN1cm5hbWUiOiLQkNCx0LDQvdC40L0ifSx7ImlkIjoxNSwibmFtZSI6ItCe0LvQtdCzIiwicGF0cm9ueW1pYyI6ItCY0LPQvtGA0LXQstC40YciLCJzdXJuYW1lIjoi0JDQsdCw0YDQvdC40LrQvtCyIn0seyJpZCI6MTYsIm5hbWUiOiLQkNC30LXRgCIsInBhdHJvbnltaWMiOiLQkNCx0LDRgdCw0LvQuCDQvtCz0LvRiyIsInN1cm5hbWUiOiLQkNCx0LDRgdCw0LvQuNC10LIifSx7ImlkIjoxNywibmFtZSI6ItCQLiIsInBhdHJvbnltaWMiOiLQki4iLCJzdXJuYW1lIjoi0JDQsdCw0YHQtdCyIn0seyJpZCI6MTgsIm5hbWUiOiLQk9C40Y/RgSIsInBhdHJvbnltaWMiOiIiLCJzdXJuYW1lIjoi0JDQsdCx0LDRgdGF0LDQvdC+0LIifSx7ImlkIjoxOSwibmFtZSI6ItCQ0LvQtdC60YHQsNC90LTRgCIsInBhdHJvbnltaWMiOiLQnNC40YDQvtC90L7QstC40YciLCJzdXJuYW1lIjoi0JDQsdCw0YjQtdCyIn0seyJpZCI6MjAsIm5hbWUiOiLQktC70LDQtNC40LzQuNGAIiwicGF0cm9ueW1pYyI6ItCS0LDRgdC40LvRjNC10LLQuNGHIiwic3VybmFtZSI6ItCQ0LHQsNGI0LjQvSJ9LHsiaWQiOjIxLCJuYW1lIjoi0J/QsNCy0LXQuyIsInBhdHJvbnltaWMiOiLQndC40LrQvtC70LDQtdCy0LjRhyIsInN1cm5hbWUiOiLQkNCx0LDRiNC40L0ifSx7ImlkIjoyMiwibmFtZSI6ItCf0LDQstC10LsiLCJwYXRyb255bWljIjoiIiwic3VybmFtZSI6ItCQ0LHQsNGI0LjQvSJ9LHsiaWQiOjIzLCJuYW1lIjoi0JDQvdC00YDQtdC5IiwicGF0cm9ueW1pYyI6ItCd0LjQutC+0LvQsNC10LLQuNGHIiwic3VybmFtZSI6ItCQ0LHQsNGJ0LXQvdC60L4ifSx7ImlkIjoyNSwibmFtZSI6ItCQ0LfQtdGAIiwicGF0cm9ueW1pYyI6IiIsInN1cm5hbWUiOiLQkNCx0LHQsNGB0L7QsiJ9LHsiaWQiOjI2LCJuYW1lIjoi0JDQu9C10LrRgdC10LkiLCJwYXRyb255bWljIjoiIiwic3VybmFtZSI6ItCQ0LHQsdCw0YHQvtCyIn0seyJpZCI6MjcsIm5hbWUiOiLQk9Cw0YjQsNC8IiwicGF0cm9ueW1pYyI6IiIsInN1cm5hbWUiOiLQkNCx0LHQsNGB0L7QsiJ9LHsiaWQiOjI5LCJuYW1lIjoi0J3QuNC30LDQvNC4IiwicGF0cm9ueW1pYyI6ItCQ0LfQtdGA0L7QstC40YciLCJzdXJuYW1lIjoi0JDQsdCx0LDRgdC+0LIifSx7ImlkIjozMCwibmFtZSI6ItCe0YDRhdCw0L0iLCJwYXRyb255bWljIjoi0JLQsNGF0LjQtCDQvtCz0LvRiyIsInN1cm5hbWUiOiLQkNCx0LHQsNGB0L7QsiJ9LHsiaWQiOjMxLCJuYW1lIjoi0KHQuNGC0LDRgNCwIiwicGF0cm9ueW1pYyI6ItCk0LDRhdGA0LDQtNC00LjQvSDQs9GL0LfRiyIsInN1cm5hbWUiOiLQkNCx0LDRgdC+0LLQsCJ9LHsiaWQiOjMzLCJuYW1lIjoi0JDQvdC40LoiLCJwYXRyb255bWljIjoiIiwic3VybmFtZSI6ItCQ0LHQsdGP0YHQvtCyIn0seyJpZCI6MzQsIm5hbWUiOiLQktC10L3QtdGA0LAiLCJwYXRyb255bWljIjoiIiwic3VybmFtZSI6ItCQ0LHQsdGP0YHQvtCy0LAifSx7ImlkIjozNSwibmFtZSI6ItCd0LDRgNC10LoiLCJwYXRyb255bWljIjoi0JPQsNCz0LjQutC+0LLQuNGHIiwic3VybmFtZSI6ItCQ0LHQs9Cw0YDRj9C9In0seyJpZCI6MzYsIm5hbWUiOiLQpdCw0YHQsNC9LdCQ0YXQvNCw0LQt0JDQvNC40L0iLCJwYXRyb255bWljIjoiIiwic3VybmFtZSI6ItCQ0LHQtNCw0LvQu9CwIn0seyJpZCI6MzcsIm5hbWUiOiLQldCz0L7RgCIsInBhdHJvbnltaWMiOiIiLCJzdXJuYW1lIjoi0JDQsdC00LDQu9C+0LIifSx7ImlkIjozOCwibmFtZSI6ItCt0LTRg9Cw0YDQtCIsInBhdHJvbnltaWMiOiIiLCJzdXJuYW1lIjoi0JDQsdC00LXQtdCyIn0seyJpZCI6MzksIm5hbWUiOiLQr9C90LAiLCJwYXRyb255bWljIjoiIiwic3VybmFtZSI6ItCQ0LLQtNC10LXQstCwIn0seyJpZCI6NDAsIm5hbWUiOiLQkNCx0LTQuNC60L7QttCwIiwicGF0cm9ueW1pYyI6IiIsInN1cm5hbWUiOiLQkNCx0LTQuNC60LDQu9GL0LrQvtCyIn0seyJpZCI6NDEsIm5hbWUiOiLQkNC50LTQsNGAIiwicGF0cm9ueW1pYyI6ItCY0LvRjNCz0LjQt9Cw0YDQvtCy0LjRhyIsInN1cm5hbWUiOiLQkNCx0LTRgNCw0YXQvNCw0L3QvtCyIn1d
+  recorded_at: Thu, 13 Jan 2022 18:27:55 GMT
+recorded_with: VCR 6.0.0
