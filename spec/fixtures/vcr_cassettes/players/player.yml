@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.rating.chgk.net/players/1110
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - rating-chgk-v2 gem/1.0.0.alpa1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.14.0 (Ubuntu)
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      vary:
+      - Accept
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - deny
+      cache-control:
+      - no-cache, private
+      date:
+      - Sat, 15 Jan 2022 17:44:29 GMT
+      link:
+      - <https://api.rating.chgk.net/docs.jsonld>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"
+      etag:
+      - '"41a9e8ee2c96f205b271e0b975f49ff5"'
+    body:
+      encoding: UTF-8
+      string: '{"id":1110,"name":"Александр","patronymic":"Сергеевич","surname":"Андрианов"}'
+  recorded_at: Sat, 15 Jan 2022 17:44:30 GMT
+recorded_with: VCR 6.0.0

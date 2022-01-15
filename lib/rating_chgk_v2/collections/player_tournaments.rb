@@ -2,8 +2,8 @@
 
 module RatingChgkV2
   module Collections
-    class PlayersCollection < BaseCollection
-      MODEL = 'Player'
+    class PlayerTournamentsCollection < BaseCollection
+      MODEL = 'PlayerTournament'
     end
   end
 end

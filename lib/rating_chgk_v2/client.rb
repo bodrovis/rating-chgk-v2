@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative 'rest/players'
+require 'rating_chgk_v2/rest/players'
 
 module RatingChgkV2
   class Client

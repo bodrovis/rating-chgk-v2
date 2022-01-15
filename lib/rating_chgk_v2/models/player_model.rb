@@ -1,21 +1,16 @@
 # frozen_string_literal: true
 
-require 'yaml'
-
 module RatingChgkV2
   module Models
-    class PlayerModel
-      def initialize(data)
-        attrs = YAML.load_file File.expand_path('../data/player.yaml', __dir__)
-        attrs.each do |att|
-          next unless data.key?(att)
+    class PlayerModel < BaseModel
+      def seasons(params = {})
+        endpoint.reinitialize new_params: params, add_query: :seasons
+        RatingChgkV2::Collections::PlayerSeasonsCollection.new endpoint.do_get, endpoint
+      end
 
-          self.class.class_exec do
-            attr_reader(att)
-          end
-
-          instance_variable_set :"@#{att}", data[att]
-        end
+      def tournaments(params = {})
+        endpoint.reinitialize new_params: params, add_query: :tournaments
+        RatingChgkV2::Collections::PlayerTournamentsCollection.new endpoint.do_get, endpoint
       end
     end
   end

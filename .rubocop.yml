@@ -38,10 +38,13 @@ Layout/DotPosition:
   EnforcedStyle: trailing
 
 RSpec/MultipleExpectations:
-  Max: 5
+  Max: 10
 
 RSpec/ExampleLength:
   Max: 35
 
 RSpec/MessageSpies:
   EnforcedStyle: receive
+
+RSpec/DescribeMethod:
+  Enabled: false

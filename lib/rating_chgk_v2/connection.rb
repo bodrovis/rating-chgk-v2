@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require 'faraday'
-require_relative 'version'
-
 module RatingChgkV2
   module Connection
     BASE_URL = 'https://api.rating.chgk.net/'
@@ -26,9 +23,8 @@ module RatingChgkV2
     end
 
     # Allows to customize request params per-client
-    def request_params_for(_client)
-      {}
-      # {request: {timeout: client.timeout, open_timeout: client.open_timeout}}
+    def request_params_for(client)
+      {request: {timeout: client.timeout, open_timeout: client.open_timeout}}
     end
   end
 end

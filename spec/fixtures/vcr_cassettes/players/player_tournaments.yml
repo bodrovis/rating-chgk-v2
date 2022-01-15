@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.rating.chgk.net/players/1110/tournaments
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - rating-chgk-v2 gem/1.0.0.alpa1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.14.0 (Ubuntu)
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      vary:
+      - Accept
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - deny
+      cache-control:
+      - no-cache, private
+      date:
+      - Sat, 15 Jan 2022 19:13:09 GMT
+      link:
+      - <https://api.rating.chgk.net/docs.jsonld>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"
+      etag:
+      - '"e857ed1346ea6541b5c1ef72b523d8ae"'
+    body:
+      encoding: UTF-8
+      string: '[{"idplayer":1110,"idteam":7121,"idtournament":314},{"idplayer":1110,"idteam":7456,"idtournament":400},{"idplayer":1110,"idteam":7456,"idtournament":483}]'
+  recorded_at: Sat, 15 Jan 2022 19:13:10 GMT
+recorded_with: VCR 6.0.0

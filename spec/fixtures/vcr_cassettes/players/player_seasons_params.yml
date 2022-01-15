@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.rating.chgk.net/players/1110/seasons?idseason=8&idteam=7456&itemsPerPage=2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - rating-chgk-v2 gem/1.0.0.alpa1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.14.0 (Ubuntu)
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      vary:
+      - Accept
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - deny
+      cache-control:
+      - no-cache, private
+      date:
+      - Sat, 15 Jan 2022 18:34:05 GMT
+      link:
+      - <https://api.rating.chgk.net/docs.jsonld>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"
+      etag:
+      - '"7607eee80f7f9d6faf63dc4f107d31b5"'
+    body:
+      encoding: UTF-8
+      string: '[{"idplayer":1110,"idseason":8,"idteam":7456,"dateAdded":"2008-11-22T00:00:00+03:00","dateRemoved":null,"playerNumber":0}]'
+  recorded_at: Sat, 15 Jan 2022 18:34:06 GMT
+recorded_with: VCR 6.0.0

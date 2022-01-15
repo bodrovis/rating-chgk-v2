@@ -1,9 +1,5 @@
 # frozen_string_literal: true
 
-require 'addressable/template'
-
-require_relative '../request'
-
 module RatingChgkV2
   module Endpoints
     class PlayersEndpoint
@@ -15,8 +11,8 @@ module RatingChgkV2
         setup client, query_params, params
       end
 
-      def reinitialize(new_params)
-        setup @client, @query_params, @params.merge(new_params)
+      def reinitialize(new_params: {}, add_query: [])
+        setup @client, @query_params.push(*add_query), new_params
         self
       end
 

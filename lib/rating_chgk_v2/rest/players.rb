@@ -1,27 +1,32 @@
 # frozen_string_literal: true
 
-require_relative '../collections/players_collection'
-require_relative '../endpoints/players_endpoint'
-
 module RatingChgkV2
   module Rest
     module Players
       def players(params = {})
-        endpoint = RatingChgkV2::Endpoints::PlayersEndpoint.new(self, :players, params)
-        RatingChgkV2::Collections::PlayersCollection.new endpoint, endpoint.do_get
+        ep = endpoint :players, params
+        RatingChgkV2::Collections::PlayersCollection.new ep.do_get, ep
       end
 
       def player(id)
-        RatingChgkV2::Endpoints::PlayersEndpoint.new self, [:players, id]
-        # get "players/#{id}"
+        ep = endpoint [:players, id]
+        RatingChgkV2::Models::PlayerModel.new ep.do_get, ep
       end
 
       def player_seasons(id, params = {})
-        get "players/#{id}/seasons", params
+        ep = endpoint [:players, id, :seasons], params
+        RatingChgkV2::Collections::PlayerSeasonsCollection.new ep.do_get, ep
       end
 
       def player_tournaments(id, params = {})
-        get "players/#{id}/tournaments", params
+        ep = endpoint [:players, id, :tournaments], params
+        RatingChgkV2::Collections::PlayerTournamentsCollection.new ep.do_get, ep
+      end
+
+      private
+
+      def endpoint(query, params = {})
+        RatingChgkV2::Endpoints::PlayersEndpoint.new self, query, params
       end
     end
   end

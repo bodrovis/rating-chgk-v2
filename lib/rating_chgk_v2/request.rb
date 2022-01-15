@@ -1,9 +1,5 @@
 # frozen_string_literal: true
 
-require_relative 'connection'
-require_relative 'json_handler'
-require_relative 'error'
-
 module RatingChgkV2
   module Request
     include RatingChgkV2::Connection
