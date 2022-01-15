@@ -12,14 +12,12 @@ module RatingChgkV2
       attr_reader :params
 
       def initialize(client, query_params = [], params = {})
-        @query_params = query_params.is_a?(Array) ? query_params : [query_params]
-        @uri = partial_uri(@query_params)
-        @client = client
-        @params = params
+        setup client, query_params, params
       end
 
-      def recreate_with(new_params)
-        self.class.new @client, @query_params, @params.merge(new_params)
+      def reinitialize(new_params)
+        setup @client, @query_params, @params.merge(new_params)
+        self
       end
 
       def do_get
@@ -27,6 +25,13 @@ module RatingChgkV2
       end
 
       private
+
+      def setup(client, query_params = [], params = {})
+        @query_params = query_params.is_a?(Array) ? query_params : [query_params]
+        @uri = partial_uri(@query_params)
+        @client = client
+        @params = params
+      end
 
       def partial_uri(raw_mapping)
         template = Addressable::Template.new '{/segments*}'

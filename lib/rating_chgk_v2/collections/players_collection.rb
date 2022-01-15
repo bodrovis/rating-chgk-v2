@@ -10,16 +10,24 @@ module RatingChgkV2
       MODEL = 'Player'
 
       def initialize(endpoint, raw_data)
-        @endpoint = endpoint
-        @items = produce_models_from raw_data
+        setup endpoint, raw_data
       end
 
-      def next_page
-        new_endpoint = @endpoint.recreate_with page: (@endpoint.params[:page] + 1)
-        self.class.new new_endpoint, new_endpoint.do_get
+      def [](index)
+        @items[index]
+      end
+
+      def next_page!
+        @endpoint.reinitialize page: (@endpoint.params[:page] + 1)
+        setup @endpoint, @endpoint.do_get
       end
 
       private
+
+      def setup(endpoint, raw_data)
+        @endpoint = endpoint
+        @items = produce_models_from raw_data
+      end
 
       def produce_models_from(raw_data)
         return if raw_data.nil?

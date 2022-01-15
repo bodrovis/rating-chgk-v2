@@ -38,7 +38,7 @@ Layout/DotPosition:
   EnforcedStyle: trailing
 
 RSpec/MultipleExpectations:
-  Max: 30
+  Max: 5
 
 RSpec/ExampleLength:
   Max: 35
