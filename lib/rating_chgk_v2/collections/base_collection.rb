@@ -8,7 +8,11 @@ module RatingChgkV2
       MODEL = ''
       attr_reader :items, :endpoint
 
-      def initialize(raw_data, endpoint)
+      def self.load(method, endpoint)
+        new endpoint.send(method), endpoint
+      end
+
+      def initialize(raw_data, endpoint = nil)
         setup raw_data, endpoint
       end
 

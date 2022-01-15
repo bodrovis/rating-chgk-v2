@@ -12,6 +12,7 @@ require 'rating_chgk_v2/error'
 
 require 'rating_chgk_v2/utils/string_utils'
 
+require 'rating_chgk_v2/endpoints/base_endpoint'
 require 'rating_chgk_v2/endpoints/players_endpoint'
 
 require 'rating_chgk_v2/models/base_model'

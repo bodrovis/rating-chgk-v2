@@ -10,7 +10,7 @@ RSpec.describe RatingChgkV2::Collections::BaseCollection do
       id: 2,
       name: 'Petr',
       surname: 'Ivanov'
-    }], nil
+    }]
   end
 
   specify '#first' do

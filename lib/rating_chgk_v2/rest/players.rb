@@ -4,23 +4,19 @@ module RatingChgkV2
   module Rest
     module Players
       def players(params = {})
-        ep = endpoint :players, params
-        RatingChgkV2::Collections::PlayersCollection.new ep.do_get, ep
+        RatingChgkV2::Collections::PlayersCollection.load :do_get, endpoint([], params)
       end
 
       def player(id)
-        ep = endpoint [:players, id]
-        RatingChgkV2::Models::PlayerModel.new ep.do_get, ep
+        RatingChgkV2::Models::PlayerModel.load :do_get, endpoint(id)
       end
 
       def player_seasons(id, params = {})
-        ep = endpoint [:players, id, :seasons], params
-        RatingChgkV2::Collections::PlayerSeasonsCollection.new ep.do_get, ep
+        RatingChgkV2::Collections::PlayerSeasonsCollection.load :do_get, endpoint([id, :seasons], params)
       end
 
       def player_tournaments(id, params = {})
-        ep = endpoint [:players, id, :tournaments], params
-        RatingChgkV2::Collections::PlayerTournamentsCollection.new ep.do_get, ep
+        RatingChgkV2::Collections::PlayerTournamentsCollection.load :do_get, endpoint([id, :tournaments], params)
       end
 
       private

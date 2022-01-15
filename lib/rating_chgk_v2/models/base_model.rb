@@ -7,6 +7,10 @@ module RatingChgkV2
 
       attr_reader :endpoint
 
+      def self.load(method, endpoint)
+        new endpoint.send(method), endpoint
+      end
+
       def initialize(raw_data, endpoint = nil)
         @endpoint = endpoint
 
