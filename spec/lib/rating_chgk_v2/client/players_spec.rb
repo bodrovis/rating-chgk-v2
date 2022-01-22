@@ -109,5 +109,18 @@ RSpec.describe RatingChgkV2::Client, 'players' do
       expect(players[0].id).to eq(15)
       expect(players.endpoint.params[:itemsPerPage]).to eq(3)
     end
+
+    it 'returns previous page' do
+      players = VCR.use_cassette('players/all_players_params') do
+        test_client.players itemsPerPage: 3, page: 2
+      end
+
+      VCR.use_cassette('players/all_players_prev_page') do
+        players.prev_page!
+      end
+
+      expect(players[0].surname).to eq('Абабилов')
+      expect(players.endpoint.params[:itemsPerPage]).to eq(3)
+    end
   end
 end

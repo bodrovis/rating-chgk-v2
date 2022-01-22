@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'pry'
 module RatingChgkV2
   module Collections
     class BaseCollection
@@ -8,8 +9,14 @@ module RatingChgkV2
       MODEL = ''
       attr_reader :items, :endpoint
 
-      def self.load(method, endpoint)
-        new endpoint.send(method), endpoint
+      class << self
+        def load(method, endpoint)
+          new endpoint.send(method), endpoint
+        end
+
+        def paginated
+          class_eval { include RatingChgkV2::Concerns::Paginated }
+        end
       end
 
       def initialize(raw_data, endpoint = nil)
@@ -28,13 +35,6 @@ module RatingChgkV2
         @items.each(&block)
       end
 
-      def next_page!
-        page_num = (@endpoint.params[:page] || 1) + 1
-        params = @endpoint.params.merge({page: page_num})
-        @endpoint.reinitialize new_params: params
-        setup @endpoint.do_get, @endpoint
-      end
-
       private
 
       def setup(raw_data, endpoint)
@@ -43,7 +43,7 @@ module RatingChgkV2
       end
 
       def produce_models_from(raw_data)
-        return if raw_data.nil?
+        return [] if raw_data&.empty?
 
         model_name = self.class.const_get :MODEL
         model_klass = RatingChgkV2::Models.const_get "#{model_name}Model"

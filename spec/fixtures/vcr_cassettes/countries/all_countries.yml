@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.rating.chgk.net/countries
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - rating-chgk-v2 gem/1.0.0.alpa1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.14.0 (Ubuntu)
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      vary:
+      - Accept
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - deny
+      cache-control:
+      - no-cache, private
+      date:
+      - Sat, 22 Jan 2022 18:52:09 GMT
+      link:
+      - <https://api.rating.chgk.net/docs.jsonld>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"
+      etag:
+      - '"a9bbb7f522899fd83b6b135def8b04fa"'
+    body:
+      encoding: UTF-8
+      string: '[{"id":1,"name":"Абхазия"},{"id":2,"name":"Австралия"},{"id":3,"name":"Азербайджан"},{"id":4,"name":"Армения"},{"id":5,"name":"Беларусь"},{"id":6,"name":"Бельгия"},{"id":7,"name":"Болгария"},{"id":8,"name":"Великобритания"},{"id":9,"name":"Германия"},{"id":10,"name":"Грузия"},{"id":11,"name":"Израиль"},{"id":12,"name":"Италия"},{"id":13,"name":"Казахстан"},{"id":14,"name":"Канада"},{"id":15,"name":"Куба"},{"id":16,"name":"Кыргызстан"},{"id":17,"name":"Латвия"},{"id":18,"name":"Литва"},{"id":19,"name":"Молдова"},{"id":20,"name":"Нидерланды"},{"id":21,"name":"Россия"},{"id":22,"name":"США"},{"id":23,"name":"Туркменистан"},{"id":24,"name":"Турция"},{"id":25,"name":"Узбекистан"},{"id":26,"name":"Украина"},{"id":27,"name":"Финляндия"},{"id":28,"name":"Франция"},{"id":29,"name":"Чехия"},{"id":30,"name":"Швеция"}]'
+  recorded_at: Sat, 22 Jan 2022 18:52:09 GMT
+recorded_with: VCR 6.0.0

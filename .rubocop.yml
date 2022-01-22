@@ -44,7 +44,7 @@ RSpec/ExampleLength:
   Max: 35
 
 RSpec/MessageSpies:
-  EnforcedStyle: receive
+  EnforcedStyle: have_received
 
 RSpec/DescribeMethod:
   Enabled: false

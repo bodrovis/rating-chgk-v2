@@ -12,18 +12,23 @@ require 'rating_chgk_v2/error'
 
 require 'rating_chgk_v2/utils/string_utils'
 
+require 'rating_chgk_v2/concerns/paginated'
+
 require 'rating_chgk_v2/endpoints/base_endpoint'
 require 'rating_chgk_v2/endpoints/players_endpoint'
+require 'rating_chgk_v2/endpoints/countries_endpoint'
 
 require 'rating_chgk_v2/models/base_model'
 require 'rating_chgk_v2/models/player_model'
 require 'rating_chgk_v2/models/player_season_model'
-require 'rating_chgk_v2/models/player_tournament'
+require 'rating_chgk_v2/models/player_tournament_model'
+require 'rating_chgk_v2/models/country_model'
 
 require 'rating_chgk_v2/collections/base_collection'
 require 'rating_chgk_v2/collections/players_collection'
 require 'rating_chgk_v2/collections/player_seasons_collection'
-require 'rating_chgk_v2/collections/player_tournaments'
+require 'rating_chgk_v2/collections/player_tournaments_collection'
+require 'rating_chgk_v2/collections/countries_collection'
 
 require 'rating_chgk_v2/client'
 

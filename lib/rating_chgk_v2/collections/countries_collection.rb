@@ -2,8 +2,10 @@
 
 module RatingChgkV2
   module Collections
-    class PlayerTournamentsCollection < BaseCollection
-      MODEL = 'PlayerTournament'
+    class CountriesCollection < BaseCollection
+      paginated
+
+      MODEL = 'Country'
     end
   end
 end

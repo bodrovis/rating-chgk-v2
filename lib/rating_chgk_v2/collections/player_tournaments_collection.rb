@@ -2,10 +2,10 @@
 
 module RatingChgkV2
   module Collections
-    class PlayerSeasonsCollection < BaseCollection
+    class PlayerTournamentsCollection < BaseCollection
       paginated
 
-      MODEL = 'PlayerSeason'
+      MODEL = 'PlayerTournament'
     end
   end
 end
