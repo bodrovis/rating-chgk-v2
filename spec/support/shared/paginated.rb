@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'pry'
 RSpec.shared_examples 'paginated' do
   let(:endpoint) { RatingChgkV2::Endpoints::BaseEndpoint.new test_client }
   let(:collection) { described_class.new [], endpoint }

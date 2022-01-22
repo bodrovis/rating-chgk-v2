@@ -22,6 +22,22 @@ RSpec.describe RatingChgkV2::Client, 'countries' do
     end
   end
 
+  describe '#create_country' do
+    before { RatingChgkV2.reset_client! }
+
+    after { RatingChgkV2.reset_client! }
+
+    it 'raises an error when the token is invalid' do
+      custom_client = RatingChgkV2.client token: 'fake_token'
+
+      expect do
+        VCR.use_cassette('countries/create_country_incorrect_token') do
+          custom_client.create_country name: 'test'
+        end
+      end.to raise_error(RatingChgkV2::Error::Unauthorized)
+    end
+  end
+
   specify '#country' do
     id = 20
     country = VCR.use_cassette('countries/country') do

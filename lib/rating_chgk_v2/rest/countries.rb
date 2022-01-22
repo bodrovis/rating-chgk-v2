@@ -11,6 +11,10 @@ module RatingChgkV2
         RatingChgkV2::Models::CountryModel.load :do_get, countries_endpoint(id)
       end
 
+      def create_country(params)
+        RatingChgkV2::Models::CountryModel.load :do_post, countries_endpoint([], params)
+      end
+
       private
 
       def countries_endpoint(query, params = {})

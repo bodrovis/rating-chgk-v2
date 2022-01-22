@@ -12,12 +12,13 @@ module RatingChgkV2
 
     private
 
-    def options(_client)
+    def options(client)
       {
         headers: {
           accept: 'application/json',
           user_agent: "rating-chgk-v2 gem/#{RatingChgkV2::VERSION}",
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          Authorization: "Bearer #{client.token}"
         },
         url: BASE_URL
       }

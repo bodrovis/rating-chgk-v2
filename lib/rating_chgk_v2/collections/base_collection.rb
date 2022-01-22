@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'pry'
 module RatingChgkV2
   module Collections
     class BaseCollection
