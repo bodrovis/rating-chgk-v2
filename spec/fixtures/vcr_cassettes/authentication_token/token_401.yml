@@ -1,0 +1,41 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.rating.chgk.net/authentication_token
+    body:
+      encoding: UTF-8
+      string: '{"email":"<API_TOKEN>@example.com","password":"123"}'
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - rating-chgk-v2 gem/1.0.0.alpa1
+      Content-type:
+      - application/json
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      server:
+      - nginx/1.14.0 (Ubuntu)
+      content-type:
+      - application/json
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      www-authenticate:
+      - Bearer
+      cache-control:
+      - no-cache, private
+      date:
+      - Sat, 22 Jan 2022 19:54:17 GMT
+      link:
+      - <https://api.rating.chgk.net/docs.jsonld>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"
+    body:
+      encoding: UTF-8
+      string: '{"code":401,"message":"Invalid credentials."}'
+  recorded_at: Sat, 22 Jan 2022 19:54:18 GMT
+recorded_with: VCR 6.0.0

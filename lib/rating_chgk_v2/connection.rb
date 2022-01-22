@@ -16,7 +16,8 @@ module RatingChgkV2
       {
         headers: {
           accept: 'application/json',
-          user_agent: "rating-chgk-v2 gem/#{RatingChgkV2::VERSION}"
+          user_agent: "rating-chgk-v2 gem/#{RatingChgkV2::VERSION}",
+          'Content-Type': 'application/json'
         },
         url: BASE_URL
       }

@@ -39,7 +39,7 @@ module RatingChgkV2
     class << self
       # Create a new error from an HTTP response
       def from_response(body)
-        msg = body['detail']
+        msg = body['detail'] || body['message']
         new msg.to_s
       end
     end

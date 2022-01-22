@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.rating.chgk.net/regions?country=%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F&itemsPerPage=3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - rating-chgk-v2 gem/1.0.0.alpa1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.14.0 (Ubuntu)
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      vary:
+      - Accept
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - deny
+      cache-control:
+      - no-cache, private
+      date:
+      - Sat, 22 Jan 2022 19:22:19 GMT
+      link:
+      - <https://api.rating.chgk.net/docs.jsonld>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"
+      etag:
+      - '"40ae0217815c30d8aa79a4ce8b4c10d2"'
+    body:
+      encoding: UTF-8
+      string: '[{"id":1,"name":"Абхазия","country":null},{"id":2,"name":"Адыгея","country":{"id":21,"name":"Россия"}},{"id":3,"name":"Акмолинская
+        область","country":{"id":13,"name":"Казахстан"}}]'
+  recorded_at: Sat, 22 Jan 2022 19:22:19 GMT
+recorded_with: VCR 6.0.0

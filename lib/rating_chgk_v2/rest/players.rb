@@ -16,7 +16,8 @@ module RatingChgkV2
       end
 
       def player_tournaments(id, params = {})
-        RatingChgkV2::Collections::PlayerTournamentsCollection.load :do_get, players_endpoint([id, :tournaments], params)
+        RatingChgkV2::Collections::PlayerTournamentsCollection.load :do_get,
+                                                                    players_endpoint([id, :tournaments], params)
       end
 
       private

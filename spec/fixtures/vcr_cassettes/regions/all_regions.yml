@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.rating.chgk.net/regions
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - rating-chgk-v2 gem/1.0.0.alpa1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.14.0 (Ubuntu)
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      vary:
+      - Accept
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - deny
+      cache-control:
+      - no-cache, private
+      date:
+      - Sat, 22 Jan 2022 19:22:19 GMT
+      link:
+      - <https://api.rating.chgk.net/docs.jsonld>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"
+      etag:
+      - '"de126cc29210eeb9984925f868ce3bcc"'
+    body:
+      encoding: UTF-8
+      string: '[{"id":1,"name":"Абхазия","country":null},{"id":2,"name":"Адыгея","country":{"id":21,"name":"Россия"}},{"id":3,"name":"Акмолинская
+        область","country":{"id":13,"name":"Казахстан"}},{"id":4,"name":"Актюбинская
+        область","country":{"id":13,"name":"Казахстан"}},{"id":5,"name":"Алматинская
+        область","country":{"id":13,"name":"Казахстан"}},{"id":6,"name":"Алматы","country":{"id":13,"name":"Казахстан"}},{"id":7,"name":"Алтай","country":{"id":21,"name":"Россия"}},{"id":8,"name":"Алтайский
+        край","country":{"id":21,"name":"Россия"}},{"id":9,"name":"Амурская область","country":{"id":21,"name":"Россия"}},{"id":10,"name":"Архангельская
+        область","country":{"id":21,"name":"Россия"}},{"id":11,"name":"Астана","country":{"id":13,"name":"Казахстан"}},{"id":12,"name":"Астраханская
+        область","country":{"id":21,"name":"Россия"}},{"id":13,"name":"Атырауская
+        область","country":{"id":13,"name":"Казахстан"}},{"id":14,"name":"Бавария","country":{"id":9,"name":"Германия"}},{"id":15,"name":"Баден-Вюртемберг","country":{"id":9,"name":"Германия"}},{"id":16,"name":"Башкортостан","country":{"id":21,"name":"Россия"}},{"id":17,"name":"Белгородская
+        область","country":{"id":21,"name":"Россия"}},{"id":18,"name":"Берлин","country":{"id":9,"name":"Германия"}},{"id":19,"name":"Бремен","country":{"id":9,"name":"Германия"}},{"id":20,"name":"Брестская
+        область","country":{"id":5,"name":"Беларусь"}},{"id":21,"name":"Брянская область","country":{"id":21,"name":"Россия"}},{"id":22,"name":"Бурятия","country":{"id":21,"name":"Россия"}},{"id":23,"name":"Вашингтон","country":{"id":22,"name":"США"}},{"id":24,"name":"Винницкая
+        область","country":{"id":26,"name":"Украина"}},{"id":25,"name":"Витебская
+        область","country":{"id":5,"name":"Беларусь"}},{"id":26,"name":"Владимирская
+        область","country":{"id":21,"name":"Россия"}},{"id":27,"name":"Волгоградская
+        область","country":{"id":21,"name":"Россия"}},{"id":28,"name":"Вологодская
+        область","country":{"id":21,"name":"Россия"}},{"id":29,"name":"Волынская область","country":{"id":26,"name":"Украина"}},{"id":30,"name":"Воронежская
+        область","country":{"id":21,"name":"Россия"}}]'
+  recorded_at: Sat, 22 Jan 2022 19:22:19 GMT
+recorded_with: VCR 6.0.0

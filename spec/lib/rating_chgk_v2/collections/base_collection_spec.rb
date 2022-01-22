@@ -21,6 +21,14 @@ RSpec.describe RatingChgkV2::Collections::BaseCollection do
     expect(player.id).to eq(1)
   end
 
+  specify '#last' do
+    stub_const "#{described_class}::MODEL", 'Player'
+
+    player = players.last
+    expect(player).to be_an_instance_of(RatingChgkV2::Models::PlayerModel)
+    expect(player.id).to eq(2)
+  end
+
   specify '#[]' do
     stub_const "#{described_class}::MODEL", 'Player'
 

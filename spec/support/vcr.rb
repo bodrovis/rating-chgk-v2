@@ -7,4 +7,6 @@ VCR.configure do |c|
   c.hook_into :faraday
   c.cassette_library_dir = File.join(File.dirname(__FILE__), '..', 'fixtures', 'vcr_cassettes')
   c.filter_sensitive_data('<API_TOKEN>') { ENV.fetch('API_TOKEN', 'fake') }
+  c.filter_sensitive_data('<CHGK_EMAIL>') { ENV.fetch('CHGK_EMAIL', 'fake') }
+  c.filter_sensitive_data('<CHGK_PASSWORD>') { ENV.fetch('CHGK_PASSWORD', 'fake') }
 end

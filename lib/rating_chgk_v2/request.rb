@@ -12,6 +12,13 @@ module RatingChgkV2
       )
     end
 
+    def post(path, client, params = {})
+      respond_with(
+        connection(client).post(prepare(path), custom_dump(params)),
+        client
+      )
+    end
+
     private
 
     # Get rid of double slashes in the `path`, leading and trailing slash

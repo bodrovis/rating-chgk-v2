@@ -18,11 +18,21 @@ module RatingChgkV2
         self
       end
 
-      def do_get
-        get @uri, @client, @params
+      private
+
+      def respond_to_missing?(method, _include_all)
+        return true if /\Ado_(.+)\z/.match?(method.to_s)
+
+        super
       end
 
-      private
+      def method_missing(method, *_args)
+        if method.to_s =~ /\Ado_(.+)\z/
+          send Regexp.last_match(1), @uri, @client, @params
+        else
+          super
+        end
+      end
 
       def setup(client, query_params = [], params = {})
         @query_params = query_params

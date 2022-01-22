@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe RatingChgkV2::Connection do
-  include described_class
+  let(:dummy) { Class.new { include RatingChgkV2::Connection }.new }
 
   before { RatingChgkV2.reset_client! }
 
@@ -9,13 +9,13 @@ RSpec.describe RatingChgkV2::Connection do
 
   it 'allows to customize timeouts' do
     custom_client = RatingChgkV2.client(params: {open_timeout: 100, timeout: 500})
-    conn = connection custom_client
+    conn = dummy.connection custom_client
     expect(conn.options.timeout).to eq(500)
     expect(conn.options.open_timeout).to eq(100)
 
     custom_client.timeout = 300
     custom_client.open_timeout = 200
-    another_conn = connection custom_client
+    another_conn = dummy.connection custom_client
     expect(another_conn.options.timeout).to eq(300)
     expect(another_conn.options.open_timeout).to eq(200)
   end

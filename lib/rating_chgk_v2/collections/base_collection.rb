@@ -5,9 +5,12 @@ module RatingChgkV2
   module Collections
     class BaseCollection
       include Enumerable
+      extend Forwardable
 
       MODEL = ''
       attr_reader :items, :endpoint
+
+      def_delegators :@items, :[], :first, :last, :each
 
       class << self
         def load(method, endpoint)
@@ -21,18 +24,6 @@ module RatingChgkV2
 
       def initialize(raw_data, endpoint = nil)
         setup raw_data, endpoint
-      end
-
-      def [](index)
-        @items[index]
-      end
-
-      def first
-        @items[0]
-      end
-
-      def each(&block)
-        @items.each(&block)
       end
 
       private
