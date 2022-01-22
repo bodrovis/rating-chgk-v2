@@ -20,14 +20,16 @@ module RatingChgkV2
 
       private
 
+      HTTP_METHODS_REGEXP = /\Ado_(get|post|put|delete)\z/.freeze
+
       def respond_to_missing?(method, _include_all)
-        return true if /\Ado_(.+)\z/.match?(method.to_s)
+        return true if HTTP_METHODS_REGEXP.match?(method.to_s)
 
         super
       end
 
       def method_missing(method, *_args)
-        if method.to_s =~ /\Ado_(.+)\z/
+        if method.to_s =~ HTTP_METHODS_REGEXP
           send Regexp.last_match(1), @uri, @client, @params
         else
           super

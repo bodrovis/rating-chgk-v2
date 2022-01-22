@@ -36,6 +36,50 @@ RSpec.describe RatingChgkV2::Client, 'countries' do
         end
       end.to raise_error(RatingChgkV2::Error::Unauthorized)
     end
+
+    it 'creates a country' do
+      stub_request(:post, 'https://api.rating.chgk.net/countries').
+        with(body: {name: 'Темерия'}).
+        to_return(
+          status: 200,
+          body: '{"id":0,"name":"Темерия"}',
+          headers: {}
+        )
+
+      country = test_client.create_country name: 'Темерия'
+      expect(country.name).to eq('Темерия')
+      expect(country.id).to eq(0)
+    end
+  end
+
+  specify '#update_country' do
+    stub_request(:put, 'https://api.rating.chgk.net/countries/0').
+      with(body: {name: 'Лирия'}).
+      to_return(
+        status: 200,
+        body: '{"id":0,"name":"Лирия"}',
+        headers: {}
+      )
+
+    country = test_client.update_country 0, name: 'Лирия'
+    expect(country.name).to eq('Лирия')
+    expect(country.id).to eq(0)
+  end
+
+  describe '#delete_country' do
+    it 'raises an error when the token is invalid' do
+      expect do
+        VCR.use_cassette('countries/delete_country_incorrect_token') do
+          test_client.delete_country 1
+        end
+      end.to raise_error(RatingChgkV2::Error::Unauthorized)
+    end
+
+    it 'deletes a country' do
+      stub_request(:delete, 'https://api.rating.chgk.net/countries/1').to_return(status: 204, body: '', headers: {})
+
+      expect(test_client.delete_country(1)).to eq('')
+    end
   end
 
   specify '#country' do

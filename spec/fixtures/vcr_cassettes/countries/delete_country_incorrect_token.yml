@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: delete
+    uri: https://api.rating.chgk.net/countries/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - rating-chgk-v2 gem/1.0.0.alpa1
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx/1.14.0 (Ubuntu)
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Www-Authenticate:
+      - Bearer
+      Cache-Control:
+      - no-cache, private
+      Date:
+      - Sat, 22 Jan 2022 21:22:01 GMT
+      Link:
+      - <https://api.rating.chgk.net/docs.jsonld>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"
+    body:
+      encoding: UTF-8
+      string: '{"code":401,"message":"JWT Token not found"}'
+  recorded_at: Sat, 22 Jan 2022 21:22:02 GMT
+recorded_with: VCR 6.0.0

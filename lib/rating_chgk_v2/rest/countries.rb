@@ -15,6 +15,14 @@ module RatingChgkV2
         RatingChgkV2::Models::CountryModel.load :do_post, countries_endpoint([], params)
       end
 
+      def update_country(id, params)
+        RatingChgkV2::Models::CountryModel.load :do_put, countries_endpoint(id, params)
+      end
+
+      def delete_country(id)
+        countries_endpoint(id).do_delete
+      end
+
       private
 
       def countries_endpoint(query, params = {})

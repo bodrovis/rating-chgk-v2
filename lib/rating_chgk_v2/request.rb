@@ -19,6 +19,21 @@ module RatingChgkV2
       )
     end
 
+    def put(path, client, params = {})
+      respond_with(
+        connection(client).put(prepare(path), custom_dump(params)),
+        client
+      )
+    end
+
+    def delete(path, client, _params = {})
+      respond_with(
+        # Rubocop tries to replace `delete` with `gsub` but that's a different method here!
+        connection(client).delete(prepare(path)),
+        client
+      )
+    end
+
     private
 
     # Get rid of double slashes in the `path`, leading and trailing slash
@@ -27,7 +42,7 @@ module RatingChgkV2
     end
 
     def respond_with(response, _client)
-      body = custom_load response.body
+      body = response.body.empty? ? response.body : custom_load(response.body)
       status = response.status
       respond_with_error status, body if status.between?(400, 599)
 
