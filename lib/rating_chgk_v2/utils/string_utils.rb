@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Lokalise
+module RatingChgkV2
   module Utils
     module StringUtils
       refine String do

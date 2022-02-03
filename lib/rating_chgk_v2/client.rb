@@ -1,16 +1,10 @@
 # frozen_string_literal: true
 
-require 'rating_chgk_v2/rest/authentication_token'
-require 'rating_chgk_v2/rest/countries'
-require 'rating_chgk_v2/rest/players'
-require 'rating_chgk_v2/rest/regions'
+require 'rating_chgk_v2/rest'
 
 module RatingChgkV2
   class Client
-    include RatingChgkV2::Rest::AuthenticationToken
-    include RatingChgkV2::Rest::Countries
-    include RatingChgkV2::Rest::Players
-    include RatingChgkV2::Rest::Regions
+    include RatingChgkV2::Rest
 
     attr_reader :token
     attr_accessor :timeout, :open_timeout

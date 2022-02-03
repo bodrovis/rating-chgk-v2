@@ -3,7 +3,7 @@
 module RatingChgkV2
   module Models
     class BaseModel
-      using Lokalise::Utils::StringUtils
+      using RatingChgkV2::Utils::StringUtils
 
       attr_reader :endpoint
 

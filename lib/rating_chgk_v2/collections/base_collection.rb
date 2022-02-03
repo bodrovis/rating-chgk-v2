@@ -9,7 +9,7 @@ module RatingChgkV2
       MODEL = ''
       attr_reader :items, :endpoint
 
-      def_delegators :@items, :[], :first, :last, :each
+      def_delegators :items, :[], :last, :each
 
       class << self
         def load(method, endpoint)
@@ -17,7 +17,7 @@ module RatingChgkV2
         end
 
         def paginated
-          class_eval { include RatingChgkV2::Concerns::Paginated }
+          include RatingChgkV2::Concerns::Paginated
         end
       end
 

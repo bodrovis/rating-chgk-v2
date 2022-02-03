@@ -13,13 +13,16 @@ module RatingChgkV2
     private
 
     def options(client)
+      headers = {
+        accept: 'application/json',
+        user_agent: "rating-chgk-v2 gem/#{RatingChgkV2::VERSION}",
+        'Content-Type': 'application/json'
+      }
+
+      headers = headers.merge({Authorization: "Bearer #{client.token}"}) if client.token
+
       {
-        headers: {
-          accept: 'application/json',
-          user_agent: "rating-chgk-v2 gem/#{RatingChgkV2::VERSION}",
-          'Content-Type': 'application/json',
-          Authorization: "Bearer #{client.token}"
-        },
+        headers: headers,
         url: BASE_URL
       }
     end

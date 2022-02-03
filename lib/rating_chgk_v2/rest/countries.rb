@@ -4,29 +4,23 @@ module RatingChgkV2
   module Rest
     module Countries
       def countries(params = {})
-        RatingChgkV2::Collections::CountriesCollection.load :do_get, countries_endpoint([], params)
+        collection_load name: 'Countries', ep_params: [[], params]
       end
 
       def country(id)
-        RatingChgkV2::Models::CountryModel.load :do_get, countries_endpoint(id)
+        model_load name: 'Country', ep_name: 'Countries', ep_params: id
       end
 
       def create_country(params)
-        RatingChgkV2::Models::CountryModel.load :do_post, countries_endpoint([], params)
+        model_load name: 'Country', ep_name: 'Countries', ep_params: [[], params], method: :do_post
       end
 
       def update_country(id, params)
-        RatingChgkV2::Models::CountryModel.load :do_put, countries_endpoint(id, params)
+        model_load name: 'Country', ep_name: 'Countries', ep_params: [id, params], method: :do_put
       end
 
       def delete_country(id)
-        countries_endpoint(id).do_delete
-      end
-
-      private
-
-      def countries_endpoint(query, params = {})
-        RatingChgkV2::Endpoints::CountriesEndpoint.new self, query, params
+        endpoint('Countries', id).do_delete
       end
     end
   end

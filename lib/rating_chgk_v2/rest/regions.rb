@@ -4,17 +4,11 @@ module RatingChgkV2
   module Rest
     module Regions
       def regions(params = {})
-        RatingChgkV2::Collections::RegionsCollection.load :do_get, regions_endpoint([], params)
+        collection_load name: 'Regions', ep_params: [[], params]
       end
 
       def region(id)
-        RatingChgkV2::Models::RegionModel.load :do_get, regions_endpoint(id)
-      end
-
-      private
-
-      def regions_endpoint(query, params = {})
-        RatingChgkV2::Endpoints::RegionsEndpoint.new self, query, params
+        model_load name: 'Region', ep_name: 'Regions', ep_params: id
       end
     end
   end
