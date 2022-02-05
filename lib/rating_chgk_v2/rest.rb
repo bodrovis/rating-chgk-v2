@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'pry'
 require 'rating_chgk_v2/rest/authentication_token'
 require 'rating_chgk_v2/rest/countries'
 require 'rating_chgk_v2/rest/players'
