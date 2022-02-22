@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.rating.chgk.net/teams?itemsPerPage=2&name=%D0%9D&page=3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - rating-chgk-v2 gem/1.0.0.alpa1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip,deflate,br
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.14.0 (Ubuntu)
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      Cache-Control:
+      - no-cache, private
+      Date:
+      - Tue, 22 Feb 2022 19:47:46 GMT
+      Link:
+      - <https://api.rating.chgk.net/docs.jsonld>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"
+      Etag:
+      - '"28640d64dd78dd7c80db3fa0421268be"'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3siaWQiOjExLCJuYW1lIjoi0JzQuNC70LvQtdC90LjRg9C8IiwidG93biI6eyJpZCI6MjgyLCJuYW1lIjoi0KHQsNC80LDRgNCwIiwicmVnaW9uIjp7ImlkIjoxMjcsIm5hbWUiOiLQodCw0LzQsNGA0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwiLCJjb3VudHJ5Ijp7ImlkIjoyMSwibmFtZSI6ItCg0L7RgdGB0LjRjyJ9fSwiY291bnRyeSI6eyJpZCI6MjEsIm5hbWUiOiLQoNC+0YHRgdC40Y8ifX19LHsiaWQiOjEyLCJuYW1lIjoi0JzQvtC00LXRgNC9IiwidG93biI6eyJpZCI6MjgyLCJuYW1lIjoi0KHQsNC80LDRgNCwIiwicmVnaW9uIjp7ImlkIjoxMjcsIm5hbWUiOiLQodCw0LzQsNGA0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwiLCJjb3VudHJ5Ijp7ImlkIjoyMSwibmFtZSI6ItCg0L7RgdGB0LjRjyJ9fSwiY291bnRyeSI6eyJpZCI6MjEsIm5hbWUiOiLQoNC+0YHRgdC40Y8ifX19XQ==
+  recorded_at: Tue, 22 Feb 2022 19:47:46 GMT
+recorded_with: VCR 6.0.0

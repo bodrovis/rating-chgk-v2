@@ -7,8 +7,8 @@ Gem::Specification.new do |spec|
   spec.version               = RatingChgkV2::VERSION
   spec.authors               = ['Ilya Bodrov-Krukowski']
   spec.email                 = ['golosizpru@gmail.com']
-  spec.summary               = 'Ruby interface to the CHGK rating API'
-  spec.description           = 'Ruby client for the CHGK rating API (api.rating.chgk.net).'
+  spec.summary               = 'Ruby interface for the new CHGK rating API'
+  spec.description           = 'Ruby client for the new CHGK rating API (api.rating.chgk.net).'
   spec.homepage              = 'https://github.com/bodrovis/rating-chgk-v2'
   spec.license               = 'MIT'
   spec.platform              = Gem::Platform::RUBY
@@ -24,12 +24,11 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'addressable',                     '~> 2.5'
   spec.add_dependency 'faraday',                         '~> 2'
-  spec.add_dependency 'json',                            '>= 1.8.0'
+  spec.add_dependency 'json',                            '~> 2'
 
   spec.add_development_dependency 'codecov',             '~> 0.1'
   spec.add_development_dependency 'dotenv',              '~> 2.5'
   spec.add_development_dependency 'oj',                  '~> 3.10'
-  spec.add_development_dependency 'pry'
   spec.add_development_dependency 'rake',                '~> 13.0'
   spec.add_development_dependency 'rspec',               '~> 3.6'
   spec.add_development_dependency 'rubocop',             '~> 1.6'

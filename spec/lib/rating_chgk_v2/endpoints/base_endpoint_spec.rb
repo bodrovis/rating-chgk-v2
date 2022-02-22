@@ -10,6 +10,6 @@ RSpec.describe RatingChgkV2::Endpoints::BaseEndpoint do
   it { is_expected.not_to respond_to(:very_wrong_method) }
 
   it 'raises an error when calling invalid methods' do
-    expect(-> { endpoint.very_wrong_method }).to raise_error(NoMethodError)
+    expect { endpoint.very_wrong_method }.to raise_error(NoMethodError)
   end
 end

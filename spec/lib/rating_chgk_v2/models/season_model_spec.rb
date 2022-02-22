@@ -9,8 +9,8 @@ RSpec.describe RatingChgkV2::Models::SeasonModel do
 
   specify '#update' do
     data = {
-      dateStart: "2021-02-05T19:37:45.004Z",
-      dateEnd: "2021-02-05T19:37:45.004Z"
+      dateStart: '2021-02-05T19:37:45.004Z',
+      dateEnd: '2021-02-05T19:37:45.004Z'
     }
 
     stub_request(:put, 'https://api.rating.chgk.net/seasons/5').

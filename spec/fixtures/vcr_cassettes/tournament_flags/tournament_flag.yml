@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.rating.chgk.net/tournament_flags/2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - rating-chgk-v2 gem/1.0.0.alpa1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.14.0 (Ubuntu)
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      Cache-Control:
+      - no-cache, private
+      Date:
+      - Tue, 22 Feb 2022 20:31:10 GMT
+      Link:
+      - <https://api.rating.chgk.net/docs.jsonld>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"
+      Etag:
+      - '"81234d8a2ba9596801e4ba4b68c46383"'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6Miwic2hvcnROYW1lIjoi0JzQqCIsImxvbmdOYW1lIjoi0JzQu9Cw0LTRiNC40LUg0YjQutC+0LvRjNC90LjQutC4ICg1LTkg0LrQu9Cw0YHRgdGLKSJ9
+  recorded_at: Tue, 22 Feb 2022 20:31:10 GMT
+recorded_with: VCR 6.0.0

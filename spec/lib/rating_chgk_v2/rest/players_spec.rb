@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe RatingChgkV2::Client, 'players' do
+RSpec.describe RatingChgkV2::Rest::Players do
   let(:player_id) { 1110 }
 
   specify '#player' do

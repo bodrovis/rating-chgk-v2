@@ -45,6 +45,3 @@ RSpec/ExampleLength:
 
 RSpec/MessageSpies:
   EnforcedStyle: have_received
-
-RSpec/DescribeMethod:
-  Enabled: false

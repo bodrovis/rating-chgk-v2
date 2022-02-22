@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe RatingChgkV2::Client, 'countries' do
+RSpec.describe RatingChgkV2::Rest::Countries do
   describe '#countries' do
     it 'returns a collection of countries' do
       countries = VCR.use_cassette('countries/all_countries') do

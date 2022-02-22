@@ -2,6 +2,8 @@
 
 module RatingChgkV2
   module Collections
+    # Base class for all collections. A collection contains an array of models, for example
+    # a collection of players, tournaments, or regions. Some collections are paginated but not all.
     class BaseCollection
       include Enumerable
       extend Forwardable

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe RatingChgkV2::Client, '#authentication_token' do
+RSpec.describe RatingChgkV2::Rest::AuthenticationToken do
   it 'raises 401 for incorrect email and password' do
     expect do
       VCR.use_cassette('authentication_token/token_401') do

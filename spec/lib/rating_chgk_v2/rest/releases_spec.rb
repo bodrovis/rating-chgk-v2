@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe RatingChgkV2::Client, 'releases' do
+RSpec.describe RatingChgkV2::Rest::Releases do
   describe '#releases' do
     it 'returns a collection of releases' do
       releases = VCR.use_cassette('releases/all_releases') do

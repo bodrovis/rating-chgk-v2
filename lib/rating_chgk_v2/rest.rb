@@ -6,6 +6,8 @@ require 'rating_chgk_v2/rest/players'
 require 'rating_chgk_v2/rest/regions'
 require 'rating_chgk_v2/rest/releases'
 require 'rating_chgk_v2/rest/seasons'
+require 'rating_chgk_v2/rest/teams'
+require 'rating_chgk_v2/rest/tournament_flags'
 
 module RatingChgkV2
   module Rest
@@ -15,6 +17,8 @@ module RatingChgkV2
     include RatingChgkV2::Rest::Regions
     include RatingChgkV2::Rest::Releases
     include RatingChgkV2::Rest::Seasons
+    include RatingChgkV2::Rest::Teams
+    include RatingChgkV2::Rest::TournamentFlags
 
     private
 

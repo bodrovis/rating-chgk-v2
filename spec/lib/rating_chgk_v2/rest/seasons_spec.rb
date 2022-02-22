@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-require 'pry'
-RSpec.describe RatingChgkV2::Client, 'seasons' do
+
+RSpec.describe RatingChgkV2::Rest::Seasons do
   describe '#seasons' do
     it 'returns a collection of seasons' do
       seasons = VCR.use_cassette('seasons/all_seasons') do
@@ -24,8 +24,8 @@ RSpec.describe RatingChgkV2::Client, 'seasons' do
 
   specify '#create_season' do
     data = {
-      dateStart: "2022-02-05T19:37:45.004Z",
-      dateEnd: "2022-02-05T19:37:45.004Z"
+      dateStart: '2022-02-05T19:37:45.004Z',
+      dateEnd: '2022-02-05T19:37:45.004Z'
     }
     stub_request(:post, 'https://api.rating.chgk.net/seasons').
       with(body: data).
@@ -44,8 +44,8 @@ RSpec.describe RatingChgkV2::Client, 'seasons' do
 
   specify '#update_season' do
     data = {
-      dateStart: "2021-02-05T19:37:45.004Z",
-      dateEnd: "2021-02-05T19:37:45.004Z"
+      dateStart: '2021-02-05T19:37:45.004Z',
+      dateEnd: '2021-02-05T19:37:45.004Z'
     }
 
     stub_request(:put, 'https://api.rating.chgk.net/seasons/0').

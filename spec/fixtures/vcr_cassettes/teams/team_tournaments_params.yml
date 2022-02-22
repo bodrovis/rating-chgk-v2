@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.rating.chgk.net/teams/2/tournaments?pagination=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - rating-chgk-v2 gem/1.0.0.alpa1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.14.0 (Ubuntu)
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      Cache-Control:
+      - no-cache, private
+      Date:
+      - Tue, 22 Feb 2022 20:14:00 GMT
+      Link:
+      - <https://api.rating.chgk.net/docs.jsonld>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"
+      Etag:
+      - '"bf4a5c4547d0962256c4bdf2cf88b783"'
+    body:
+      encoding: UTF-8
+      string: '[{"idteam":2,"idtournament":8},{"idteam":2,"idtournament":8},{"idteam":2,"idtournament":8},{"idteam":2,"idtournament":8},{"idteam":2,"idtournament":8},{"idteam":2,"idtournament":8},{"idteam":2,"idtournament":8},{"idteam":2,"idtournament":11},{"idteam":2,"idtournament":11},{"idteam":2,"idtournament":11},{"idteam":2,"idtournament":11},{"idteam":2,"idtournament":11},{"idteam":2,"idtournament":11},{"idteam":2,"idtournament":12},{"idteam":2,"idtournament":12},{"idteam":2,"idtournament":12},{"idteam":2,"idtournament":12},{"idteam":2,"idtournament":12},{"idteam":2,"idtournament":12},{"idteam":2,"idtournament":16},{"idteam":2,"idtournament":16},{"idteam":2,"idtournament":16},{"idteam":2,"idtournament":16},{"idteam":2,"idtournament":16},{"idteam":2,"idtournament":16},{"idteam":2,"idtournament":22},{"idteam":2,"idtournament":22},{"idteam":2,"idtournament":22},{"idteam":2,"idtournament":22},{"idteam":2,"idtournament":22}]'
+  recorded_at: Tue, 22 Feb 2022 20:14:00 GMT
+recorded_with: VCR 6.0.0
