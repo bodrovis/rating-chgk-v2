@@ -1,0 +1,8 @@
+- id
+- status
+- venue
+- representative
+- narrators
+- approximateTeamsCount
+- issuedAt
+- tournamentId

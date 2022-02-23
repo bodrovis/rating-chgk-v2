@@ -1,0 +1,10 @@
+- id
+- idtournament
+- type
+- issuedAt
+- status
+- appeal
+- comment
+- overriddenBy
+- questionNumber
+- answer

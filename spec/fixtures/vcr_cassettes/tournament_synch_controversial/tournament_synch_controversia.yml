@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.rating.chgk.net/tournament_synch_controversials/1000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - rating-chgk-v2 gem/1.0.0.alpa1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.14.0 (Ubuntu)
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      Cache-Control:
+      - no-cache, private
+      Date:
+      - Wed, 23 Feb 2022 20:03:05 GMT
+      Link:
+      - <https://api.rating.chgk.net/docs.jsonld>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"
+      Etag:
+      - '"9782393b86e012aacd210b963aad0967"'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6MTAwMCwicXVlc3Rpb25OdW1iZXIiOjI2LCJhbnN3ZXIiOiLQstCw0LvRj9GC0YzRgdGPIiwiaXNzdWVkQXQiOiIyMDEyLTAxLTMxVDA5OjI2OjMyKzA0OjAwIiwic3RhdHVzIjoiRCIsImNvbW1lbnQiOiIiLCJyZXNvbHZlZEF0IjoiMjAxMi0wMS0zMVQxNToyNjozMiswNDowMCIsImFwcGVhbEp1cnlDb21tZW50IjpudWxsfQ==
+  recorded_at: Wed, 23 Feb 2022 20:03:06 GMT
+recorded_with: VCR 6.0.0

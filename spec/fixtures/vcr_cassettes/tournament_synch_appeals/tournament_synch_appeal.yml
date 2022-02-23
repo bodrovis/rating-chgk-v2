@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.rating.chgk.net/tournament_synch_appeals/1000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - rating-chgk-v2 gem/1.0.0.alpa1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.14.0 (Ubuntu)
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      Cache-Control:
+      - no-cache, private
+      Date:
+      - Wed, 23 Feb 2022 19:53:18 GMT
+      Link:
+      - <https://api.rating.chgk.net/docs.jsonld>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"
+      Etag:
+      - '"f816388425bf1691b2488883ae7d3bb4"'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6MTAwMCwiaWR0b3VybmFtZW50IjoyMjI1LCJ0eXBlIjoiQSIsImlzc3VlZEF0IjoiMjAxMy0wNC0xOVQyMjoyODoxMCswNDowMCIsInN0YXR1cyI6IkQiLCJhcHBlYWwiOiLQmNC3INGC0LXQutGB0YLQsCDQstC+0L/RgNC+0YHQsCDRgdC70LXQtNGD0LXRgiDQvtC00L3QvtC30L3QsNGH0L3Ri9C5INCy0YvQstC+0LQsINGH0YLQviA4INGH0LXQu9C+0LLQtdC6ID8g0Y3RgtC+INCx0L7QtdCy0L7QuSDRgNCw0YHRh9C10YIg0LrQsNC60L7QuS3RgtC+ID/RgdGC0YDQtdC70Y/RgtC10LvRjNC90L7QuT8g0YPRgdGC0LDQvdC+0LLQutC4LiDQntC00L3QsNC60L4g0LTQu9GPINCw0YDRgtC40LvQu9C10YDQuNC50YHQutC+0LPQviDRgNCw0YHRh9C10YLQsCA4INGH0LXQu9C+0LLQtdC6INC00L7QstC+0LvRjNC90L4g0LzQvdC+0LPQviwg0LHQvtC10LLQvtC5INGA0LDRgdGH0LXRgiDQtNCw0LbQtSDQtNC40LLQuNC30LjQvtC90L3QvtC5INCw0YDRgtC40LvQu9C10YDQuNC4LCDQutCw0Log0L/RgNCw0LLQuNC70L4sINGB0L7RgdGC0LDQstC70Y/QtdGCIDUtNyDRh9C10LvQvtCy0LXQui4g0J/QvtGN0YLQvtC80YMg0LzRiyDRgdC00LXQu9Cw0LvQuCDQstGL0LLQvtC0LCDRh9GC0L4g0YDQtdGH0Ywg0LjQtNC10YIg0L4g0LHQvtC10LLQvtC8INGA0LDRgdGH0LXRgtC1INGA0LDQutC10YLQvdC+0Lkg0YPRgdGC0LDQvdC+0LLQutC4LCDRgdC70LXQtNC+0LLQsNGC0LXQu9GM0L3Qviwg0L/RgNC+0LjQt9Cy0L7QtNC40LvRgdGPINC30LDQv9GD0YHQuiDRgNCw0LrQtdGCLiDQkiDQstC+0LnQvdC1INCh0YPQtNC90L7Qs9C+INC00L3RjyDRgdGC0L7RgNC+0L3RiyDQv9GA0LjQvNC10L3Rj9C70Lgg0LrQsNC6INC/0YDQvtGC0LjQstC+0YLQsNC90LrQvtCy0YvQtSDRg9C/0YDQsNCy0LvRj9C10LzRi9C1INGA0LDQutC10YLRiyAo0J/QotCj0KApLCDRgtCw0Log0Lgg0LfQtdC90LjRgtC90L4t0YDQsNC60LXRgtC90YvQtSDQutC+0LzQv9C70LXQutGB0YsgKNCX0KDQmikuICDQn9C+0YHQutC+0LvRjNC60YMg0L7RgtCy0LXRgiDQv9GA0LjQvdC40LzQsNC10YLRgdGPINC/0L4g0YHQvNGL0YHQu9GDICjQt9Cw0LvQvyDQuNC70Lgg0LLRi9GB0YLRgNC10LspINCx0LXQtyDRg9GC0L7Rh9C90LXQvdC40Y8g0YLQuNC/0LAg0L7RgNGD0LbQuNGPLCDQv9GA0L7RgdC40Lwg0LfQsNGH0LXRgdGC0Ywg0L3QsNGIINC+0YLQstC10YIg0LrQsNC6INC+0LTQvdC+0LfQvdCw0YfQvdC+INGB0L7QstC/0LDQtNCw0Y7RidC40Lkg0L/QviDRgdC80YvRgdC70YMg0YEg0LDQstGC0L7RgNGB0LrQuNC8LlxyXG5odHRwOlwvXC9ydS53aWtpcGVkaWEub3JnXC93aWtpXC8lQzIlRUUlRTklRUQlRTBfJUQxJUYzJUU0JUVEJUVFJUUzJUVFXyVFNCVFRCVGRiIsImNvbW1lbnQiOiLQkiDQstC+0YHQv9C+0LzQuNC90LDQvdC40Y/RhSDRhNC40LPRg9GA0LjRgNGD0LXRgiA/Y2Fubm9uPywg0YLQsNC6INGH0YLQviDQvtGC0LLQtdGCINC60L7QvNCw0L3QtNGLINGE0LDQutGC0LjRh9C10YHQutC4INC90LXQstC10YDQtdC9LiIsIm92ZXJyaWRkZW5CeSI6bnVsbCwicXVlc3Rpb25OdW1iZXIiOjgsImFuc3dlciI6bnVsbH0=
+  recorded_at: Wed, 23 Feb 2022 19:53:19 GMT
+recorded_with: VCR 6.0.0

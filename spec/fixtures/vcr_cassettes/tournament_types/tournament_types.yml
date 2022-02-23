@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.rating.chgk.net/tournament_types
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - rating-chgk-v2 gem/1.0.0.alpa1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.14.0 (Ubuntu)
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      Cache-Control:
+      - no-cache, private
+      Date:
+      - Wed, 23 Feb 2022 20:16:13 GMT
+      Link:
+      - <https://api.rating.chgk.net/docs.jsonld>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"
+      Etag:
+      - '"27e52cf229615e1a2db4140999c46e19"'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3siaWQiOjEsIm5hbWUiOiLQndC10LjQt9Cy0LXRgdGC0L3Ri9C5In0seyJpZCI6MiwibmFtZSI6ItCe0LHRi9GH0L3Ri9C5In0seyJpZCI6MywibmFtZSI6ItCh0LjQvdGF0YDQvtC9In0seyJpZCI6NCwibmFtZSI6ItCg0LXQs9C40L7QvdCw0LvRjNC90YvQuSJ9LHsiaWQiOjUsIm5hbWUiOiLQntCx0YnQuNC5INC30LDRh9GR0YIifSx7ImlkIjo2LCJuYW1lIjoi0KHRgtGA0L7Qs9C+INGB0LjQvdGF0YDQvtC90L3Ri9C5In0seyJpZCI6OCwibmFtZSI6ItCQ0YHQuNC90YXRgNC+0L0ifSx7ImlkIjoxMCwibmFtZSI6ItCc0LDRgNCw0YTQvtC9In0seyJpZCI6MTEsIm5hbWUiOiLQntC90LvQsNC50L0ifV0=
+  recorded_at: Wed, 23 Feb 2022 20:16:13 GMT
+recorded_with: VCR 6.0.0

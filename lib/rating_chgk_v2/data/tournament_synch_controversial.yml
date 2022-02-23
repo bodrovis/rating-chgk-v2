@@ -1,0 +1,8 @@
+- id
+- questionNumber
+- answer
+- issuedAt
+- status
+- comment
+- resolvedAt
+- appealJuryComment
