@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.homepage              = 'https://github.com/bodrovis/rating-chgk-v2'
   spec.license               = 'MIT'
   spec.platform              = Gem::Platform::RUBY
-  spec.required_ruby_version = '>= 2.5.0'
+  spec.required_ruby_version = '>= 2.7.0'
 
   spec.files = Dir['README.md', 'LICENSE',
                    'CHANGELOG.md', 'lib/**/*.rb', 'lib/rating_chgk_v2/data/*.yaml',
@@ -25,6 +25,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'addressable',                     '~> 2.5'
   spec.add_dependency 'faraday',                         '~> 2'
   spec.add_dependency 'json',                            '~> 2'
+  spec.add_dependency 'zeitwerk',                        '~> 2.4'
 
   spec.add_development_dependency 'codecov',             '~> 0.1'
   spec.add_development_dependency 'dotenv',              '~> 2.5'

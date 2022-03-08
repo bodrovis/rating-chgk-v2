@@ -1,18 +1,5 @@
 # frozen_string_literal: true
 
-require 'rating_chgk_v2/rest/authentication_token'
-require 'rating_chgk_v2/rest/countries'
-require 'rating_chgk_v2/rest/players'
-require 'rating_chgk_v2/rest/regions'
-require 'rating_chgk_v2/rest/releases'
-require 'rating_chgk_v2/rest/seasons'
-require 'rating_chgk_v2/rest/teams'
-require 'rating_chgk_v2/rest/tournament_flags'
-require 'rating_chgk_v2/rest/tournament_synch_appeals'
-require 'rating_chgk_v2/rest/tournament_synch_controversials'
-require 'rating_chgk_v2/rest/tournament_synch_requests'
-require 'rating_chgk_v2/rest/tournament_types'
-
 module RatingChgkV2
   module Rest
     include RatingChgkV2::Rest::AuthenticationToken

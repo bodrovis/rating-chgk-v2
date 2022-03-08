@@ -9,9 +9,9 @@ http://api.rating.chgk.net/
 
 ## Installation and requirements
 
-This gem requires Ruby 2.5+. Install it by running:
+This gem requires Ruby 2.7+. Install it by running:
 
-$ gem install rating-chgk-v2
+    $ gem install rating-chgk-v2
 
 ## Copyright and license
 

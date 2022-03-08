@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'rating_chgk_v2/rest'
-
 module RatingChgkV2
   class Client
     include RatingChgkV2::Rest
