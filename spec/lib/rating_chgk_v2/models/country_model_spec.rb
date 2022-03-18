@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe RatingChgkV2::Models::CountryModel do
-  let(:country) do
+  let!(:country) do
     VCR.use_cassette('countries/country') do
       test_client.country 20
     end

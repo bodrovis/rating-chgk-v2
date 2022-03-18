@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe RatingChgkV2::Models::SeasonModel do
-  let(:season) do
+  let!(:season) do
     VCR.use_cassette('seasons/season') do
       test_client.season 5
     end
