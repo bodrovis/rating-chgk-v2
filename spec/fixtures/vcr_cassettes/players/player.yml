@@ -11,6 +11,8 @@ http_interactions:
       - application/json
       User-Agent:
       - rating-chgk-v2 gem/1.0.0.alpa1
+      Content-type:
+      - application/json
   response:
     status:
       code: 200
@@ -33,7 +35,7 @@ http_interactions:
       cache-control:
       - no-cache, private
       date:
-      - Sat, 15 Jan 2022 17:44:29 GMT
+      - Fri, 18 Mar 2022 17:37:17 GMT
       link:
       - <https://api.rating.chgk.net/docs.jsonld>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"
       etag:
@@ -41,5 +43,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"id":1110,"name":"Александр","patronymic":"Сергеевич","surname":"Андрианов"}'
-  recorded_at: Sat, 15 Jan 2022 17:44:30 GMT
-recorded_with: VCR 6.0.0
+  recorded_at: Fri, 18 Mar 2022 17:37:18 GMT
+recorded_with: VCR 6.1.0

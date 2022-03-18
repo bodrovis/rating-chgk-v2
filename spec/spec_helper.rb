@@ -22,6 +22,7 @@ Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].sort.each { |f| require f }
 RSpec.configure do |config|
   config.include TestClient
 
+  WebMock.allow_net_connect!
   WebMock::API.prepend(Module.new do
     extend self
     # disable VCR when a WebMock stub is created
