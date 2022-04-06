@@ -1,0 +1,70 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.rating.chgk.net/towns
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - rating-chgk-v2 gem/1.0.0.alpa1
+      Content-type:
+      - application/json
+      Accept-Encoding:
+      - gzip,deflate,br
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.14.0 (Ubuntu)
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      vary:
+      - Accept
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - deny
+      cache-control:
+      - no-cache, private
+      date:
+      - Wed, 06 Apr 2022 19:33:46 GMT
+      link:
+      - <https://api.rating.chgk.net/docs.jsonld>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"
+      etag:
+      - '"77cb1518571a059f15bf4cd2adad5f97"'
+    body:
+      encoding: UTF-8
+      string: '[{"id":1,"name":"Абакан","region":{"id":152,"name":"Хакасия","country":{"id":21,"name":"Россия"}},"country":{"id":21,"name":"Россия"}},{"id":2,"name":"Азов","region":{"id":123,"name":"Ростовская
+        область","country":{"id":21,"name":"Россия"}},"country":{"id":21,"name":"Россия"}},{"id":3,"name":"Алчевск","region":{"id":77,"name":"Луганская
+        область","country":{"id":26,"name":"Украина"}},"country":{"id":26,"name":"Украина"}},{"id":4,"name":"Анадырь","region":{"id":163,"name":"Чукотский
+        АО","country":{"id":21,"name":"Россия"}},"country":{"id":21,"name":"Россия"}},{"id":5,"name":"Анапа","region":{"id":69,"name":"Краснодарский
+        край","country":{"id":21,"name":"Россия"}},"country":{"id":21,"name":"Россия"}},{"id":6,"name":"Ангарск","region":{"id":50,"name":"Иркутская
+        область","country":{"id":21,"name":"Россия"}},"country":{"id":21,"name":"Россия"}},{"id":7,"name":"Апатиты","region":{"id":92,"name":"Мурманская
+        область","country":{"id":21,"name":"Россия"}},"country":{"id":21,"name":"Россия"}},{"id":8,"name":"Апшеронск","region":{"id":69,"name":"Краснодарский
+        край","country":{"id":21,"name":"Россия"}},"country":{"id":21,"name":"Россия"}},{"id":9,"name":"Армавир","region":{"id":69,"name":"Краснодарский
+        край","country":{"id":21,"name":"Россия"}},"country":{"id":21,"name":"Россия"}},{"id":10,"name":"Бахмут
+        (Артёмовск)","region":{"id":38,"name":"Донецкая область","country":{"id":26,"name":"Украина"}},"country":{"id":26,"name":"Украина"}},{"id":11,"name":"Архангельск","region":{"id":10,"name":"Архангельская
+        область","country":{"id":21,"name":"Россия"}},"country":{"id":21,"name":"Россия"}},{"id":12,"name":"Астрахань","region":{"id":12,"name":"Астраханская
+        область","country":{"id":21,"name":"Россия"}},"country":{"id":21,"name":"Россия"}},{"id":13,"name":"Атюрьево","region":{"id":89,"name":"Мордовия","country":{"id":21,"name":"Россия"}},"country":{"id":21,"name":"Россия"}},{"id":14,"name":"Ахалгори","region":null,"country":{"id":10,"name":"Грузия"}},{"id":15,"name":"Ахмета","region":null,"country":{"id":10,"name":"Грузия"}},{"id":16,"name":"Ашдод","region":{"id":165,"name":"Южный
+        округ","country":{"id":11,"name":"Израиль"}},"country":{"id":11,"name":"Израиль"}},{"id":17,"name":"Ашхабад","region":null,"country":{"id":23,"name":"Туркменистан"}},{"id":18,"name":"Бабиничи","region":{"id":25,"name":"Витебская
+        область","country":{"id":5,"name":"Беларусь"}},"country":{"id":5,"name":"Беларусь"}},{"id":19,"name":"Багдади","region":null,"country":{"id":10,"name":"Грузия"}},{"id":20,"name":"Базарный
+        Сызган","region":{"id":149,"name":"Ульяновская область","country":{"id":21,"name":"Россия"}},"country":{"id":21,"name":"Россия"}},{"id":21,"name":"Баку","region":null,"country":{"id":3,"name":"Азербайджан"}},{"id":22,"name":"Барнаул","region":{"id":8,"name":"Алтайский
+        край","country":{"id":21,"name":"Россия"}},"country":{"id":21,"name":"Россия"}},{"id":23,"name":"Батуми","region":null,"country":{"id":10,"name":"Грузия"}},{"id":24,"name":"Беэр-Шева","region":{"id":165,"name":"Южный
+        округ","country":{"id":11,"name":"Израиль"}},"country":{"id":11,"name":"Израиль"}},{"id":25,"name":"Бейт-Шемеш","region":{"id":165,"name":"Южный
+        округ","country":{"id":11,"name":"Израиль"}},"country":{"id":11,"name":"Израиль"}},{"id":26,"name":"Белгород","region":{"id":17,"name":"Белгородская
+        область","country":{"id":21,"name":"Россия"}},"country":{"id":21,"name":"Россия"}},{"id":28,"name":"Бердск","region":{"id":98,"name":"Новосибирская
+        область","country":{"id":21,"name":"Россия"}},"country":{"id":21,"name":"Россия"}},{"id":29,"name":"Бердянск","region":{"id":44,"name":"Запорожская
+        область","country":{"id":26,"name":"Украина"}},"country":{"id":26,"name":"Украина"}},{"id":30,"name":"Березники","region":{"id":115,"name":"Пермский
+        край","country":{"id":21,"name":"Россия"}},"country":{"id":21,"name":"Россия"}},{"id":31,"name":"Берлин","region":{"id":18,"name":"Берлин","country":{"id":9,"name":"Германия"}},"country":{"id":9,"name":"Германия"}}]'
+  recorded_at: Wed, 06 Apr 2022 19:33:47 GMT
+recorded_with: VCR 6.1.0

@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.rating.chgk.net/towns?itemsPerPage=2&page=3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - rating-chgk-v2 gem/1.0.0.alpa1
+      Content-type:
+      - application/json
+      Accept-Encoding:
+      - gzip,deflate,br
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.14.0 (Ubuntu)
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      vary:
+      - Accept
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - deny
+      cache-control:
+      - no-cache, private
+      date:
+      - Wed, 06 Apr 2022 19:33:46 GMT
+      link:
+      - <https://api.rating.chgk.net/docs.jsonld>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"
+      etag:
+      - '"1552675e7e9744022a94d2566ad36a98"'
+    body:
+      encoding: UTF-8
+      string: '[{"id":5,"name":"Анапа","region":{"id":69,"name":"Краснодарский край","country":{"id":21,"name":"Россия"}},"country":{"id":21,"name":"Россия"}},{"id":6,"name":"Ангарск","region":{"id":50,"name":"Иркутская
+        область","country":{"id":21,"name":"Россия"}},"country":{"id":21,"name":"Россия"}}]'
+  recorded_at: Wed, 06 Apr 2022 19:33:47 GMT
+recorded_with: VCR 6.1.0

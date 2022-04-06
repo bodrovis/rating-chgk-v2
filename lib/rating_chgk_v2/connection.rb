@@ -16,15 +16,13 @@ module RatingChgkV2
       headers = {
         accept: 'application/json',
         user_agent: "rating-chgk-v2 gem/#{RatingChgkV2::VERSION}",
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        accept_encoding: 'gzip,deflate,br'
       }
 
       headers = headers.merge({Authorization: "Bearer #{client.token}"}) if client.token
 
-      {
-        headers: headers,
-        url: BASE_URL
-      }
+      {headers: headers, url: BASE_URL}
     end
 
     # Allows to customize request params per-client

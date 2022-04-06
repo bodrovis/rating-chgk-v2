@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.rating.chgk.net/tournaments/7798
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - rating-chgk-v2 gem/1.0.0.alpa1
+      Content-type:
+      - application/json
+      Accept-Encoding:
+      - gzip,deflate,br
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.14.0 (Ubuntu)
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      vary:
+      - Accept
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - deny
+      cache-control:
+      - no-cache, private
+      date:
+      - Wed, 06 Apr 2022 19:03:58 GMT
+      link:
+      - <https://api.rating.chgk.net/docs.jsonld>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"
+      etag:
+      - '"4547f102d9ac2395d7ffd66d3b924a6a"'
+    body:
+      encoding: UTF-8
+      string: '{"id":7798,"name":"Игры доброй воли","lastEditDate":"2022-03-30T09:34:21+03:00","dateStart":"2022-03-13T13:00:00+03:00","dateEnd":"2022-03-20T13:00:00+03:00","type":{"id":3,"name":"Синхрон"},"season":"\/seasons\/56","orgcommittee":[{"id":14450,"name":"Леонид","patronymic":"Валентинович","surname":"Климович"}],"synchData":{"dateRequestsAllowedTo":"2022-03-19T23:55:00+03:00","resultFixesTo":"2022-04-04T23:55:00+03:00","resultsRecapsTo":"2022-03-29T23:55:00+03:00","allowAppealCancel":true,"allowNarratorErrorAppeal":false,"archive":true,"dateArchivedAt":"2022-04-04T00:00:00+03:00","dateDownloadQuestionsFrom":"2022-03-12T00:00:00+03:00","dateDownloadQuestionsTo":"2022-03-19T17:15:00+03:00","hideQuestionsTo":"2022-03-20T23:55:00+03:00","hideResultsTo":"2022-03-20T23:55:00+03:00","allVerdictsDone":null,"instantControversial":true},"mainPayment":300,"discountedPayment":100,"discountedPaymentReason":"школьные
+        команды","currency":"r","editors":[{"id":14450,"name":"Леонид","patronymic":"Валентинович","surname":"Климович"},{"id":14453,"name":"Ольга","patronymic":"Леонидовна","surname":"Климович"}],"tournamentInRatingBalanced":true,"difficultyForecast":2.5,"maiiAegis":true,"maiiAegisUpdatedAt":"2022-02-12T08:35:02.372430Z","maiiRating":true,"maiiRatingUpdatedAt":"2022-02-12T08:35:02.372192Z","questionQty":{"1":9,"2":9,"3":9,"4":9,"5":9}}'
+  recorded_at: Wed, 06 Apr 2022 19:03:59 GMT
+recorded_with: VCR 6.1.0

@@ -3,15 +3,51 @@
 ![CI](https://github.com/bodrovis/rating-chgk-v2/actions/workflows/ci.yml/badge.svg)
 [![Test Coverage](https://codecov.io/gh/bodrovis/rating-chgk-v2/graph/badge.svg)](https://codecov.io/gh/bodrovis/rating-chgk-v2)
 
-This gem is a replacement for [ChgkRating](https://github.com/bodrovis/ChgkRating) which worked only with the deprecated API version.
-
-http://api.rating.chgk.net/
+Ruby client for [competitive "What? Where? When?" (aka "CHGK") API](http://api.rating.chgk.net/). This gem is a replacement for [ChgkRating](https://github.com/bodrovis/ChgkRating) which worked only with the deprecated API version.
 
 ## Installation and requirements
 
 This gem requires Ruby 2.7+. Install it by running:
 
-    $ gem install rating-chgk-v2
+```
+$ gem install rating-chgk-v2
+```
+
+Include it in your script:
+
+```ruby
+require 'rating_chgk_v2'
+```
+
+## Client initialization
+
+Initialize an API client:
+
+```ruby
+@client = RatingChgkV2.client
+```
+
+Optionally, provide your JWT token and connection options:
+
+```ruby
+@client = RatingChgkV2.client token: 'MY_JWT', params: {open_timeout: 100, timeout: 500}
+```
+
+Now use client to perform API requests:
+
+```ruby
+teams = @client.teams itemsPerPage: 2, name: 'Н', page: 3
+```
+
+## Running tests
+
+Tests are written in RSpec (all HTTP requests are stubbed):
+
+```
+rspec .
+```
+
+Observe test results and coverage.
 
 ## Copyright and license
 

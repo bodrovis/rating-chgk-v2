@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.rating.chgk.net/tournaments?itemsPerPage=2&page=3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - rating-chgk-v2 gem/1.0.0.alpa1
+      Content-type:
+      - application/json
+      Accept-Encoding:
+      - gzip,deflate,br
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.14.0 (Ubuntu)
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      vary:
+      - Accept
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - deny
+      cache-control:
+      - no-cache, private
+      date:
+      - Wed, 06 Apr 2022 19:03:58 GMT
+      link:
+      - <https://api.rating.chgk.net/docs.jsonld>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"
+      etag:
+      - '"1d856538777ecce19515b0a981f1d7e4"'
+    body:
+      encoding: UTF-8
+      string: '[{"id":5,"name":"Бостонское чаепитие","lastEditDate":"2003-10-10T00:00:00+04:00","dateStart":"2003-10-10T00:00:00+04:00","dateEnd":"2003-10-13T00:00:00+04:00","type":{"id":2,"name":"Обычный"},"season":"\/seasons\/2","orgcommittee":[],"synchData":null,"mainPayment":null,"discountedPayment":null,"discountedPaymentReason":null,"currency":"u","editors":[],"tournamentInRatingBalanced":true,"difficultyForecast":null,"maiiAegis":false,"maiiAegisUpdatedAt":null,"maiiRating":false,"maiiRatingUpdatedAt":null,"questionQty":null},{"id":6,"name":"Нестерка","lastEditDate":"2003-10-18T00:00:00+04:00","dateStart":"2003-10-18T00:00:00+04:00","dateEnd":"2003-10-19T00:00:00+04:00","type":{"id":2,"name":"Обычный"},"season":"\/seasons\/2","orgcommittee":[],"synchData":null,"mainPayment":null,"discountedPayment":null,"discountedPaymentReason":null,"currency":"u","editors":[],"tournamentInRatingBalanced":true,"difficultyForecast":null,"maiiAegis":false,"maiiAegisUpdatedAt":null,"maiiRating":false,"maiiRatingUpdatedAt":null,"questionQty":null}]'
+  recorded_at: Wed, 06 Apr 2022 19:03:59 GMT
+recorded_with: VCR 6.1.0

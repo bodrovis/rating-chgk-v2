@@ -15,7 +15,7 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = '>= 2.7.0'
 
   spec.files = Dir['README.md', 'LICENSE',
-                   'CHANGELOG.md', 'lib/**/*.rb', 'lib/rating_chgk_v2/data/*.yaml',
+                   'CHANGELOG.md', 'lib/**/*.rb', 'lib/rating_chgk_v2/data/*.yml',
                    'rating-chgk-v2.gemspec', '.github/*.md',
                    'Gemfile', 'Rakefile']
   spec.test_files       = Dir['spec/**/*.rb']

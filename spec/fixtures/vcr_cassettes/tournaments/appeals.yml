@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.rating.chgk.net/tournaments/7798/appeals
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - rating-chgk-v2 gem/1.0.0.alpa1
+      Content-type:
+      - application/json
+      Accept-Encoding:
+      - gzip,deflate,br
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.14.0 (Ubuntu)
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      vary:
+      - Accept
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - deny
+      cache-control:
+      - no-cache, private
+      date:
+      - Wed, 06 Apr 2022 19:12:03 GMT
+      link:
+      - <https://api.rating.chgk.net/docs.jsonld>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"
+      etag:
+      - '"058c31346e4b6276b9736c7bd01f2b8f"'
+    body:
+      encoding: UTF-8
+      string: '[{"id":12153,"idtournament":7798,"type":"A","issuedAt":"2022-03-20T13:43:26+03:00","status":"D","appeal":"\"Какая
+        дата была на этом лично вручаемом знаке?\"\rОтвет: 20 июня (1944 года). \r\rДа,
+        в пакете у ведущего в авторском ответе стоит именно 20 июНя (и это не ошибка
+        ведущего!), хотя на награде, о которой идет речь, стоит 20 июЛя - день покушения
+        на Гитлера и начала операции Валькирия.\r\rМы признаем, что на один день ошиблись
+        при попытке вспомнить точную дату покушения на Гитлера. Но авторы-то ошиблись
+        на 30 дней.\r\rМы проявляем добрую волю и не требуем снять этот вопрос в связи
+        с явной опечаткой в пакете. Но мы просим проявить добрую волю и зачесть ответ,
+        который всяко соответствует истине в разы лучше авторского.","comment":"Неверно
+        по факту.","overriddenBy":null,"questionNumber":20,"answer":"19 июля 1944"}]'
+  recorded_at: Wed, 06 Apr 2022 19:12:04 GMT
+recorded_with: VCR 6.1.0

@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.rating.chgk.net/tournaments/7798/results?includeMasksAndControversials=1&includeRatingB=1&includeTeamFlags=1&includeTeamMembers=1&town=202
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - rating-chgk-v2 gem/1.0.0.alpa1
+      Content-type:
+      - application/json
+      Accept-Encoding:
+      - gzip,deflate,br
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.14.0 (Ubuntu)
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      vary:
+      - Accept
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - deny
+      cache-control:
+      - no-cache, private
+      date:
+      - Wed, 06 Apr 2022 19:15:34 GMT
+      link:
+      - <https://api.rating.chgk.net/docs.jsonld>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"
+      etag:
+      - '"14a00d93afaa777e707984a08e27fe96"'
+    body:
+      encoding: UTF-8
+      string: '[{"team":{"id":53341,"name":"Парадные ватники","town":{"id":202,"name":"Мурманск"}},"mask":"011111111111011110001000000011111110111011111","current":{"name":"Парадные
+        ватники","town":{"id":202,"name":"Мурманск"}},"questionsTotal":31,"synchRequest":{"id":103475,"venue":{"id":3067,"name":"Мурманск"},"tournamentId":7798},"rating":{"inRating":true,"b":1216,"predictedPosition":3,"rt":6109,"rb":6467,"rg":5286,"r":5595,"bp":1069,"d1":147,"d2":14,"d":80},"position":1,"controversials":[],"flags":[],"teamMembers":[{"flag":"Б","usedRating":0,"rating":8685,"player":{"id":17610,"name":"Андрей","patronymic":"Геннадьевич","surname":"Кучумов"}},{"flag":"Б","usedRating":0,"rating":8528,"player":{"id":26261,"name":"Сергей","patronymic":"Валерьевич","surname":"Пташенчук"}},{"flag":"Б","usedRating":0,"rating":7726,"player":{"id":67162,"name":"Александр","patronymic":"Анатольевич","surname":"Челтыбашев"}},{"flag":"Б","usedRating":0,"rating":8503,"player":{"id":137631,"name":"Оксана","patronymic":"Юрьевна","surname":"Карнатова"}},{"flag":"Б","usedRating":0,"rating":8528,"player":{"id":172554,"name":"Татьяна","patronymic":"Сергеевна","surname":"Бровкина"}}]}]'
+  recorded_at: Wed, 06 Apr 2022 19:15:35 GMT
+recorded_with: VCR 6.1.0

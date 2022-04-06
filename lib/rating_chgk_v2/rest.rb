@@ -14,6 +14,8 @@ module RatingChgkV2
     include RatingChgkV2::Rest::TournamentSynchControversials
     include RatingChgkV2::Rest::TournamentSynchRequests
     include RatingChgkV2::Rest::TournamentTypes
+    include RatingChgkV2::Rest::Tournaments
+    include RatingChgkV2::Rest::Towns
 
     private
 
