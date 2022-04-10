@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.rating.chgk.net/venues?itemsPerPage=3&page=2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - rating-chgk-v2 gem/1.0.0.alpa1
+      Content-type:
+      - application/json
+      Accept-Encoding:
+      - gzip,deflate,br
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.14.0 (Ubuntu)
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      vary:
+      - Accept
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - deny
+      cache-control:
+      - no-cache, private
+      date:
+      - Sun, 10 Apr 2022 14:55:13 GMT
+      link:
+      - <https://api.rating.chgk.net/docs.jsonld>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"
+      etag:
+      - '"ebfdf23eb79abf05aae9857dcc44c8ed"'
+    body:
+      encoding: UTF-8
+      string: '[{"id":3033,"name":"Ереван","town":{"id":100,"name":"Ереван","region":null,"country":{"id":4,"name":"Армения"}},"type":{"id":1,"name":"Постоянная"},"address":null,"urls":[]},{"id":3034,"name":"Реутов","town":{"id":1513,"name":"Реутов","region":{"id":91,"name":"Московская
+        область","country":{"id":21,"name":"Россия"}},"country":{"id":21,"name":"Россия"}},"type":{"id":1,"name":"Постоянная"},"address":null,"urls":[]},{"id":3035,"name":"Харьков","town":{"id":363,"name":"Харьков","region":{"id":153,"name":"Харьковская
+        область","country":{"id":26,"name":"Украина"}},"country":{"id":26,"name":"Украина"}},"type":{"id":1,"name":"Постоянная"},"address":null,"urls":[]}]'
+  recorded_at: Sun, 10 Apr 2022 14:55:14 GMT
+recorded_with: VCR 6.1.0

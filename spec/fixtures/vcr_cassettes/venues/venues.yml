@@ -1,0 +1,73 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.rating.chgk.net/venues
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - rating-chgk-v2 gem/1.0.0.alpa1
+      Content-type:
+      - application/json
+      Accept-Encoding:
+      - gzip,deflate,br
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.14.0 (Ubuntu)
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      vary:
+      - Accept
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - deny
+      cache-control:
+      - no-cache, private
+      date:
+      - Sun, 10 Apr 2022 14:55:14 GMT
+      link:
+      - <https://api.rating.chgk.net/docs.jsonld>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"
+      etag:
+      - '"7868a7ac5d539741319317719a66d1bb"'
+    body:
+      encoding: UTF-8
+      string: '[{"id":3030,"name":"Санкт-Петербург","town":{"id":285,"name":"Санкт-Петербург","region":{"id":128,"name":"Санкт-Петербург","country":{"id":21,"name":"Россия"}},"country":{"id":21,"name":"Россия"}},"type":{"id":1,"name":"Постоянная"},"address":null,"urls":[]},{"id":3031,"name":"Магнитогорск","town":{"id":187,"name":"Магнитогорск","region":{"id":157,"name":"Челябинская
+        область","country":{"id":21,"name":"Россия"}},"country":{"id":21,"name":"Россия"}},"type":{"id":1,"name":"Постоянная"},"address":null,"urls":[]},{"id":3032,"name":"Курск","town":{"id":170,"name":"Курск","region":{"id":73,"name":"Курская
+        область","country":{"id":21,"name":"Россия"}},"country":{"id":21,"name":"Россия"}},"type":{"id":1,"name":"Постоянная"},"address":null,"urls":[]},{"id":3033,"name":"Ереван","town":{"id":100,"name":"Ереван","region":null,"country":{"id":4,"name":"Армения"}},"type":{"id":1,"name":"Постоянная"},"address":null,"urls":[]},{"id":3034,"name":"Реутов","town":{"id":1513,"name":"Реутов","region":{"id":91,"name":"Московская
+        область","country":{"id":21,"name":"Россия"}},"country":{"id":21,"name":"Россия"}},"type":{"id":1,"name":"Постоянная"},"address":null,"urls":[]},{"id":3035,"name":"Харьков","town":{"id":363,"name":"Харьков","region":{"id":153,"name":"Харьковская
+        область","country":{"id":26,"name":"Украина"}},"country":{"id":26,"name":"Украина"}},"type":{"id":1,"name":"Постоянная"},"address":null,"urls":[]},{"id":3036,"name":"Тюмень","town":{"id":341,"name":"Тюмень","region":{"id":147,"name":"Тюменская
+        область","country":{"id":21,"name":"Россия"}},"country":{"id":21,"name":"Россия"}},"type":{"id":1,"name":"Постоянная"},"address":null,"urls":["https:\/\/vk.com\/tosigk"]},{"id":3037,"name":"Екатеринбург","town":{"id":98,"name":"Екатеринбург","region":{"id":131,"name":"Свердловская
+        область","country":{"id":21,"name":"Россия"}},"country":{"id":21,"name":"Россия"}},"type":{"id":1,"name":"Постоянная"},"address":null,"urls":[]},{"id":3038,"name":"Северодвинск","town":{"id":293,"name":"Северодвинск","region":{"id":10,"name":"Архангельская
+        область","country":{"id":21,"name":"Россия"}},"country":{"id":21,"name":"Россия"}},"type":{"id":1,"name":"Постоянная"},"address":null,"urls":[]},{"id":3039,"name":"Нижневартовск","town":{"id":214,"name":"Нижневартовск","region":{"id":147,"name":"Тюменская
+        область","country":{"id":21,"name":"Россия"}},"country":{"id":21,"name":"Россия"}},"type":{"id":1,"name":"Постоянная"},"address":null,"urls":[]},{"id":3040,"name":"Ташкент","town":{"id":322,"name":"Ташкент","region":null,"country":{"id":25,"name":"Узбекистан"}},"type":{"id":1,"name":"Постоянная"},"address":null,"urls":[]},{"id":3041,"name":"Кишинёв","town":{"id":147,"name":"Кишинёв","region":null,"country":{"id":19,"name":"Молдова"}},"type":{"id":1,"name":"Постоянная"},"address":null,"urls":[]},{"id":3042,"name":"Киров","town":{"id":142,"name":"Киров","region":{"id":64,"name":"Кировская
+        область","country":{"id":21,"name":"Россия"}},"country":{"id":21,"name":"Россия"}},"type":{"id":1,"name":"Постоянная"},"address":null,"urls":[]},{"id":3043,"name":"Ровно","town":{"id":276,"name":"Ровно","region":{"id":121,"name":"Ровенская
+        область","country":{"id":26,"name":"Украина"}},"country":{"id":26,"name":"Украина"}},"type":{"id":1,"name":"Постоянная"},"address":null,"urls":[]},{"id":3044,"name":"Ейск","town":{"id":97,"name":"Ейск","region":{"id":69,"name":"Краснодарский
+        край","country":{"id":21,"name":"Россия"}},"country":{"id":21,"name":"Россия"}},"type":{"id":1,"name":"Постоянная"},"address":null,"urls":[]},{"id":3045,"name":"Астрахань","town":{"id":12,"name":"Астрахань","region":{"id":12,"name":"Астраханская
+        область","country":{"id":21,"name":"Россия"}},"country":{"id":21,"name":"Россия"}},"type":{"id":1,"name":"Постоянная"},"address":null,"urls":[]},{"id":3046,"name":"Тернополь","town":{"id":328,"name":"Тернополь","region":{"id":142,"name":"Тернопольская
+        область","country":{"id":26,"name":"Украина"}},"country":{"id":26,"name":"Украина"}},"type":{"id":1,"name":"Постоянная"},"address":null,"urls":[]},{"id":3047,"name":"Ивантеевка","town":{"id":116,"name":"Ивантеевка","region":{"id":91,"name":"Московская
+        область","country":{"id":21,"name":"Россия"}},"country":{"id":21,"name":"Россия"}},"type":{"id":1,"name":"Постоянная"},"address":null,"urls":[]},{"id":3048,"name":"Липецк","town":{"id":176,"name":"Липецк","region":{"id":76,"name":"Липецкая
+        область","country":{"id":21,"name":"Россия"}},"country":{"id":21,"name":"Россия"}},"type":{"id":1,"name":"Постоянная"},"address":null,"urls":[]},{"id":3049,"name":"Нижний
+        Тагил","town":{"id":217,"name":"Нижний Тагил","region":{"id":131,"name":"Свердловская
+        область","country":{"id":21,"name":"Россия"}},"country":{"id":21,"name":"Россия"}},"type":{"id":1,"name":"Постоянная"},"address":null,"urls":[]},{"id":3050,"name":"Ростов-на-Дону","town":{"id":277,"name":"Ростов-на-Дону","region":{"id":123,"name":"Ростовская
+        область","country":{"id":21,"name":"Россия"}},"country":{"id":21,"name":"Россия"}},"type":{"id":1,"name":"Постоянная"},"address":null,"urls":[]},{"id":3051,"name":"Хельсинки","town":{"id":364,"name":"Хельсинки","region":null,"country":{"id":27,"name":"Финляндия"}},"type":{"id":1,"name":"Постоянная"},"address":null,"urls":["http:\/\/www.chgk.fi","https:\/\/www.facebook.com\/chgk.fi","https:\/\/chgk-fi.livejournal.com\/"]},{"id":3052,"name":"Иваново","town":{"id":114,"name":"Иваново","region":{"id":45,"name":"Ивановская
+        область","country":{"id":21,"name":"Россия"}},"country":{"id":21,"name":"Россия"}},"type":{"id":1,"name":"Постоянная"},"address":null,"urls":[]},{"id":3053,"name":"Берлин
+        ","town":{"id":31,"name":"Берлин","region":{"id":18,"name":"Берлин","country":{"id":9,"name":"Германия"}},"country":{"id":9,"name":"Германия"}},"type":{"id":1,"name":"Постоянная"},"address":"13347
+        Berlin, Lindower Str. 18 ","urls":["https:\/\/facebook.com\/groups\/166368870181114"]},{"id":3054,"name":"Франкфурт-на-Майне","town":{"id":357,"name":"Франкфурт-на-Майне","region":{"id":33,"name":"Гессен","country":{"id":9,"name":"Германия"}},"country":{"id":9,"name":"Германия"}},"type":{"id":1,"name":"Постоянная"},"address":null,"urls":[]},{"id":3055,"name":"Томск","town":{"id":333,"name":"Томск","region":{"id":144,"name":"Томская
+        область","country":{"id":21,"name":"Россия"}},"country":{"id":21,"name":"Россия"}},"type":{"id":1,"name":"Постоянная"},"address":"Красноармейская
+        ул., 147, Томск, Томская обл., 634045","urls":["https:\/\/vk.com\/tomskchgk"]},{"id":3056,"name":"Уфа","town":{"id":354,"name":"Уфа","region":{"id":16,"name":"Башкортостан","country":{"id":21,"name":"Россия"}},"country":{"id":21,"name":"Россия"}},"type":{"id":1,"name":"Постоянная"},"address":null,"urls":[]},{"id":3057,"name":"Зарафшан","town":{"id":107,"name":"Зарафшан","region":null,"country":{"id":25,"name":"Узбекистан"}},"type":{"id":1,"name":"Постоянная"},"address":null,"urls":[]},{"id":3058,"name":"Навои","town":{"id":207,"name":"Навои","region":null,"country":{"id":25,"name":"Узбекистан"}},"type":{"id":1,"name":"Постоянная"},"address":null,"urls":[]},{"id":3059,"name":"Черновцы","town":{"id":380,"name":"Черновцы","region":{"id":160,"name":"Черновицкая
+        область","country":{"id":26,"name":"Украина"}},"country":{"id":26,"name":"Украина"}},"type":{"id":1,"name":"Постоянная"},"address":null,"urls":[]}]'
+  recorded_at: Sun, 10 Apr 2022 14:55:15 GMT
+recorded_with: VCR 6.1.0

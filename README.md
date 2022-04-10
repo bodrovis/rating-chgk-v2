@@ -27,7 +27,7 @@ Initialize an API client:
 @client = RatingChgkV2.client
 ```
 
-Optionally, provide your JWT token and connection options:
+Optionally, provide your JWT token and connection options (please note that JWT is not required to access most of the endpoints):
 
 ```ruby
 @client = RatingChgkV2.client token: 'MY_JWT', params: {open_timeout: 100, timeout: 500}

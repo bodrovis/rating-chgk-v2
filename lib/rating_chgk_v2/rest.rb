@@ -16,6 +16,8 @@ module RatingChgkV2
     include RatingChgkV2::Rest::TournamentTypes
     include RatingChgkV2::Rest::Tournaments
     include RatingChgkV2::Rest::Towns
+    include RatingChgkV2::Rest::VenueTypes
+    include RatingChgkV2::Rest::Venues
 
     private
 

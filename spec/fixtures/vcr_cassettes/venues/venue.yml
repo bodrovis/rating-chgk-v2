@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.rating.chgk.net/venues/3601
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - rating-chgk-v2 gem/1.0.0.alpa1
+      Content-type:
+      - application/json
+      Accept-Encoding:
+      - gzip,deflate,br
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.14.0 (Ubuntu)
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      vary:
+      - Accept
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - deny
+      cache-control:
+      - no-cache, private
+      date:
+      - Sun, 10 Apr 2022 14:55:13 GMT
+      link:
+      - <https://api.rating.chgk.net/docs.jsonld>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"
+      etag:
+      - '"b1608e8557f1be4be894220226259f69"'
+    body:
+      encoding: UTF-8
+      string: '{"id":3601,"name":"Библиотека","town":{"id":59,"name":"Витебск","region":{"id":25,"name":"Витебская
+        область","country":{"id":5,"name":"Беларусь"}},"country":{"id":5,"name":"Беларусь"}},"type":{"id":1,"name":"Постоянная"},"address":"Витебск,
+        пр. Фрунзе 30а","urls":["https:\/\/vk.com\/chgk_vitebsk"]}'
+  recorded_at: Sun, 10 Apr 2022 14:55:14 GMT
+recorded_with: VCR 6.1.0

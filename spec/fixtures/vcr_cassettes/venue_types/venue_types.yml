@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.rating.chgk.net/venue_types
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - rating-chgk-v2 gem/1.0.0.alpa1
+      Content-type:
+      - application/json
+      Accept-Encoding:
+      - gzip,deflate,br
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.14.0 (Ubuntu)
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      vary:
+      - Accept
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - deny
+      cache-control:
+      - no-cache, private
+      date:
+      - Sun, 10 Apr 2022 14:41:17 GMT
+      link:
+      - <https://api.rating.chgk.net/docs.jsonld>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"
+      etag:
+      - '"de02a011fbf64a6dbccd7d9f5523b79f"'
+    body:
+      encoding: UTF-8
+      string: '[{"id":1,"name":"Постоянная"},{"id":2,"name":"Эпизодическая"},{"id":3,"name":"В
+        рамках фестиваля"},{"id":4,"name":"Разовая"}]'
+  recorded_at: Sun, 10 Apr 2022 14:41:18 GMT
+recorded_with: VCR 6.1.0
