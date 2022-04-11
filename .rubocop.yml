@@ -13,6 +13,7 @@ Metrics/BlockLength:
   Max: 36
   Exclude:
     - spec/**/*.rb
+    - rating-chgk-v2.gemspec
 
 Metrics/BlockNesting:
   Max: 2

@@ -39,6 +39,9 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'vcr',                 '~> 6.0'
   spec.add_development_dependency 'webmock',             '~> 3.14'
   spec.metadata = {
-    'rubygems_mfa_required' => 'true'
+    'rubygems_mfa_required' => 'true',
+    'wiki_uri' => 'https://github.com/bodrovis/rating-chgk-v2/wiki',
+    'changelog_uri' => 'https://github.com/bodrovis/rating-chgk-v2/blob/master/CHANGELOG.md',
+    'bug_tracker_uri' => 'https://github.com/bodrovis/rating-chgk-v2/issues'
   }
 end

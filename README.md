@@ -39,6 +39,10 @@ Now use client to perform API requests:
 teams = @client.teams itemsPerPage: 2, name: 'Н', page: 3
 ```
 
+## Usage
+
+**[Please find documentation at our Wiki](https://github.com/bodrovis/rating-chgk-v2/wiki)**.
+
 ## Running tests
 
 Tests are written in RSpec (all HTTP requests are stubbed):

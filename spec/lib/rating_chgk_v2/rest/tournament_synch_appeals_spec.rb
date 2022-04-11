@@ -3,7 +3,7 @@
 RSpec.describe RatingChgkV2::Rest::TournamentSynchAppeals do
   let(:id) { 1000 }
 
-  specify '#tournament_synch_appeals' do
+  specify '#tournament_synch_appeal' do
     appeal = VCR.use_cassette('tournament_synch_appeals/tournament_synch_appeal') do
       test_client.tournament_synch_appeal id
     end
