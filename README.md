@@ -1,5 +1,6 @@
 # RatingChgkV2
 
+![Gem](https://img.shields.io/gem/v/rating-chgk-v2)
 ![CI](https://github.com/bodrovis/rating-chgk-v2/actions/workflows/ci.yml/badge.svg)
 [![Test Coverage](https://codecov.io/gh/bodrovis/rating-chgk-v2/graph/badge.svg)](https://codecov.io/gh/bodrovis/rating-chgk-v2)
 
