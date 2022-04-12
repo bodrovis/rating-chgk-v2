@@ -5,7 +5,7 @@ require File.expand_path('lib/rating_chgk_v2/version', __dir__)
 Gem::Specification.new do |spec|
   spec.name                  = 'rating-chgk-v2'
   spec.version               = RatingChgkV2::VERSION
-  spec.authors               = ['Ilya Bodrov-Krukowski']
+  spec.authors               = ['Ilya Krukowski']
   spec.email                 = ['golosizpru@gmail.com']
   spec.summary               = 'Ruby interface for the new CHGK rating API'
   spec.description           = 'Ruby client for the new CHGK rating API (api.rating.chgk.net).'
@@ -39,6 +39,8 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'vcr',                 '~> 6.0'
   spec.add_development_dependency 'webmock',             '~> 3.14'
   spec.metadata = {
+    'homepage_uri' => 'https://github.com/bodrovis/rating-chgk-v2',
+    'source_code_uri' => 'https://github.com/bodrovis/rating-chgk-v2',
     'rubygems_mfa_required' => 'true',
     'wiki_uri' => 'https://github.com/bodrovis/rating-chgk-v2/wiki',
     'changelog_uri' => 'https://github.com/bodrovis/rating-chgk-v2/blob/master/CHANGELOG.md',
