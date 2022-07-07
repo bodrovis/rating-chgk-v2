@@ -11,7 +11,7 @@ RSpec.describe RatingChgkV2::Rest::AuthenticationToken do
 
   it 'returns token for correct email and password' do
     token_obj = VCR.use_cassette('authentication_token/token') do
-      test_client.authentication_token email: ENV['CHGK_EMAIL'], password: ENV['CHGK_PASSWORD']
+      test_client.authentication_token email: ENV.fetch('CHGK_EMAIL', nil), password: ENV.fetch('CHGK_PASSWORD', nil)
     end
 
     expect(token_obj.token).to eq('stubbed_token')

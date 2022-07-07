@@ -18,7 +18,6 @@ Gem::Specification.new do |spec|
                    'CHANGELOG.md', 'lib/**/*.rb', 'lib/rating_chgk_v2/data/*.yml',
                    'rating-chgk-v2.gemspec', '.github/*.md',
                    'Gemfile', 'Rakefile']
-  spec.test_files       = Dir['spec/**/*.rb']
   spec.extra_rdoc_files = ['README.md']
   spec.require_paths    = ['lib']
 
