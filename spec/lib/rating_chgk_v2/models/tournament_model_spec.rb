@@ -11,7 +11,7 @@ RSpec.describe RatingChgkV2::Models::TournamentModel do
   specify '#appeals' do
     appeals = VCR.use_cassette('tournaments/appeals') do
       tournament.appeals
-      tournament.appeals
+      tournament.appeals # regression to make sure a correct endpoint is requested
     end
 
     expect(appeals[0].id).to eq(12_153)
@@ -21,7 +21,7 @@ RSpec.describe RatingChgkV2::Models::TournamentModel do
   specify '#requests' do
     requests = VCR.use_cassette('tournaments/requests') do
       tournament.requests
-      tournament.requests
+      tournament.requests # regression to make sure a correct endpoint is requested
     end
 
     expect(requests[0].id).to eq(101_060)
@@ -38,5 +38,19 @@ RSpec.describe RatingChgkV2::Models::TournamentModel do
 
     expect(results.team['id']).to eq(53_341)
     expect(results.position).to eq(1)
+  end
+
+  it 'works for multiple requests' do
+    requests = VCR.use_cassette('tournaments/requests') do
+      tournament.requests
+    end
+
+    expect(requests[0].id).to eq(101_060)
+
+    appeals = VCR.use_cassette('tournaments/appeals') do
+      tournament.appeals
+    end
+
+    expect(appeals[0].id).to eq(12_153)
   end
 end
