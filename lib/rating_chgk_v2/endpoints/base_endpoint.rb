@@ -8,12 +8,13 @@ module RatingChgkV2
       attr_reader :params
 
       def initialize(client, query_params = [], params = {})
-        setup client, base_query.push(*query_params), params
+        @instance_query = base_query.push(*query_params)
+        setup client, @instance_query, params
       end
 
       def reinitialize(new_params: {}, add_query: [])
         add_query = [add_query] unless add_query.is_a?(Array)
-        new_query = add_query&.any? ? @query_params.push(*add_query) : @query_params
+        new_query = add_query&.any? ? @instance_query + add_query : @query_params
         setup @client, new_query, new_params
         self
       end
