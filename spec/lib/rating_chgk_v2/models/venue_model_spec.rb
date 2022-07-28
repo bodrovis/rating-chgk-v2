@@ -27,4 +27,15 @@ RSpec.describe RatingChgkV2::Models::VenueModel do
 
     expect(venue.destroy).to eq('')
   end
+
+  specify "#requests" do
+    result = VCR.use_cassette('venues/requests') do
+      venue.requests
+      venue.requests
+    end
+
+    expect(result.items.size).to eq 4
+
+    expect(result.first.tournamentId).to eq 5751
+  end
 end
