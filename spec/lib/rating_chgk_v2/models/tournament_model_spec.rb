@@ -11,6 +11,7 @@ RSpec.describe RatingChgkV2::Models::TournamentModel do
   specify '#appeals' do
     appeals = VCR.use_cassette('tournaments/appeals') do
       tournament.appeals
+      tournament.appeals
     end
 
     expect(appeals[0].id).to eq(12_153)
@@ -20,6 +21,7 @@ RSpec.describe RatingChgkV2::Models::TournamentModel do
   specify '#requests' do
     requests = VCR.use_cassette('tournaments/requests') do
       tournament.requests
+      tournament.requests
     end
 
     expect(requests[0].id).to eq(101_060)
@@ -28,6 +30,8 @@ RSpec.describe RatingChgkV2::Models::TournamentModel do
 
   specify '#results' do
     results = VCR.use_cassette('tournaments/results') do
+      tournament.results includeTeamMembers: 1, includeMasksAndControversials: 1,
+                         includeTeamFlags: 1, includeRatingB: 1, town: 202
       tournament.results includeTeamMembers: 1, includeMasksAndControversials: 1,
                          includeTeamFlags: 1, includeRatingB: 1, town: 202
     end.first
