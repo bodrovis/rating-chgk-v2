@@ -28,7 +28,6 @@ module RatingChgkV2
 
     def delete(path, client, _params = {})
       respond_with(
-        # Rubocop tries to replace `delete` with `gsub` but that's a different method here!
         connection(client).delete(prepare(path)),
         client
       )

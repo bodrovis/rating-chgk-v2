@@ -9,7 +9,6 @@ Gem::Specification.new do |spec|
   spec.email                 = ['golosizpru@gmail.com']
   spec.summary               = 'Ruby interface for the new CHGK rating API'
   spec.description           = 'Ruby client for the new CHGK rating API (api.rating.chgk.net).'
-  spec.homepage              = 'https://github.com/bodrovis/rating-chgk-v2'
   spec.license               = 'MIT'
   spec.platform              = Gem::Platform::RUBY
   spec.required_ruby_version = '>= 2.7.0'
