@@ -11,6 +11,11 @@ module RatingChgkV2
       def destroy
         endpoint.do_delete
       end
+
+      def requests(params = {})
+        endpoint.reinitialize new_params: params, add_query: :requests
+        RatingChgkV2::Collections::TournamentRequestsCollection.load :do_get, endpoint
+      end
     end
   end
 end
