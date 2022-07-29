@@ -16,5 +16,6 @@ RSpec.describe RatingChgkV2::Rest::TournamentSynchRequests do
     expect(req.approximateTeamsCount).to be_nil
     expect(req.issuedAt).to eq('2012-09-21T10:30:14+04:00')
     expect(req.tournamentId).to eq(2180)
+    expect(req.dateStart).to eq('2012-10-13T17:00:00+04:00')
   end
 end

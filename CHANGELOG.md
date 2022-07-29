@@ -1,6 +1,10 @@
 # Changelog
 
-## 1.0.1 (29-Jul-22)
+## 1.1.0 (29-Jul-22)
+
+* Added requests for venues (thanks, @L-Eugene)
+
+## 1.0.1 (28-Jul-22)
 
 * Fixed endpoint reinitialization (thanks, @L-Eugene)
 * Minor fixes

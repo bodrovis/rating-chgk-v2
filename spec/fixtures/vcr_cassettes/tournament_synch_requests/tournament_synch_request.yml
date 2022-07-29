@@ -10,41 +10,41 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - rating-chgk-v2 gem/1.0.0.alpa1
-      Content-Type:
+      - rating-chgk-v2 gem/1.0.1
+      Content-type:
       - application/json
       Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      - gzip,deflate,br
   response:
     status:
       code: 200
       message: OK
     headers:
-      Server:
+      server:
       - nginx/1.14.0 (Ubuntu)
-      Content-Type:
+      content-type:
       - application/json; charset=utf-8
-      Transfer-Encoding:
+      transfer-encoding:
       - chunked
-      Connection:
+      connection:
       - keep-alive
-      Vary:
+      vary:
       - Accept
-      X-Content-Type-Options:
+      x-content-type-options:
       - nosniff
-      X-Frame-Options:
+      x-frame-options:
       - deny
-      Cache-Control:
+      cache-control:
       - no-cache, private
-      Date:
-      - Wed, 23 Feb 2022 20:08:45 GMT
-      Link:
+      date:
+      - Fri, 29 Jul 2022 10:21:06 GMT
+      link:
       - <https://api.rating.chgk.net/docs.jsonld>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"
-      Etag:
-      - '"eede467f7842481510eb49a19eecdfef"'
+      etag:
+      - '"c673ac7cea40e6108cb69208f6d173ba"'
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        eyJpZCI6MTAwMCwic3RhdHVzIjoiQSIsInZlbnVlIjp7ImlkIjozMTUzLCJuYW1lIjoi0J/QsNCy0LvQvtC00LDRgCIsInRvd24iOnsiaWQiOjE2ODAsIm5hbWUiOiLQn9Cw0LLQu9C+0LTQsNGAIiwicmVnaW9uIjp7ImlkIjoxMTEsIm5hbWUiOiLQn9Cw0LLQu9C+0LTQsNGA0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwiLCJjb3VudHJ5Ijp7ImlkIjoxMywibmFtZSI6ItCa0LDQt9Cw0YXRgdGC0LDQvSJ9fSwiY291bnRyeSI6eyJpZCI6MTMsIm5hbWUiOiLQmtCw0LfQsNGF0YHRgtCw0L0ifX0sInR5cGUiOnsiaWQiOjEsIm5hbWUiOiLQn9C+0YHRgtC+0Y/QvdC90LDRjyJ9LCJhZGRyZXNzIjpudWxsLCJ1cmxzIjpbXX0sInJlcHJlc2VudGF0aXZlIjp7ImlkIjo2Mjc2OSwibmFtZSI6ItCQ0LnQsdC10LoiLCJwYXRyb255bWljIjoi0JrQsNC40YDQsdC10LrQvtCy0LjRhyIsInN1cm5hbWUiOiLQodCw0LrQtdC90L7QsiJ9LCJuYXJyYXRvcnMiOlt7ImlkIjo3ODI0NywibmFtZSI6ItCe0LvRjNCz0LAiLCJwYXRyb255bWljIjoiIiwic3VybmFtZSI6ItCb0L7Qs9Cy0LjQvdC10L3QutC+In1dLCJhcHByb3hpbWF0ZVRlYW1zQ291bnQiOm51bGwsImlzc3VlZEF0IjoiMjAxMi0wOS0yMVQxMDozMDoxNCswNDowMCIsInRvdXJuYW1lbnRJZCI6MjE4MH0=
-  recorded_at: Wed, 23 Feb 2022 20:08:46 GMT
-recorded_with: VCR 6.0.0
+      encoding: UTF-8
+      string: '{"id":1000,"status":"A","venue":{"id":3153,"name":"Павлодар","town":{"id":1680,"name":"Павлодар","region":{"id":111,"name":"Павлодарская
+        область","country":{"id":13,"name":"Казахстан"}},"country":{"id":13,"name":"Казахстан"}},"type":{"id":1,"name":"Постоянная"},"address":null,"urls":[]},"representative":{"id":62769,"name":"Айбек","patronymic":"Каирбекович","surname":"Сакенов"},"narrators":[{"id":78247,"name":"Ольга","patronymic":"","surname":"Логвиненко"}],"approximateTeamsCount":null,"issuedAt":"2012-09-21T10:30:14+04:00","dateStart":"2012-10-13T17:00:00+04:00","tournamentId":2180}'
+  recorded_at: Fri, 29 Jul 2022 10:21:06 GMT
+recorded_with: VCR 6.1.0

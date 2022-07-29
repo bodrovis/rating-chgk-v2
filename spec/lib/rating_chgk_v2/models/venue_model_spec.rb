@@ -31,7 +31,6 @@ RSpec.describe RatingChgkV2::Models::VenueModel do
   specify '#requests' do
     result = VCR.use_cassette('venues/requests') do
       venue.requests
-      venue.requests
     end
 
     expect(result.items.size).to eq 4
