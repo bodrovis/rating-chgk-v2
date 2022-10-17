@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.2.0 (17-Oct-22)
+
+* Properly handle flat params:
+
+```ruby
+client.tournaments 'type[]': [1, 2, 3] # requesting tournaments with IDs 1, 2, or 3
+```
+
 ## 1.1.0 (29-Jul-22)
 
 * Added requests for venues (thanks, @L-Eugene)

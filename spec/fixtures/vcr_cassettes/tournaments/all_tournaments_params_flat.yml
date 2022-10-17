@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.rating.chgk.net/tournaments?itemsPerPage=4&type%5B%5D=1&type%5B%5D=2&type%5B%5D=3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - rating-chgk-v2 gem/1.1.0
+      Content-type:
+      - application/json
+      Accept-Encoding:
+      - gzip,deflate,br
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.14.0 (Ubuntu)
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      vary:
+      - Accept
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - deny
+      cache-control:
+      - no-cache, private
+      date:
+      - Mon, 17 Oct 2022 14:46:11 GMT
+      link:
+      - <https://api.rating.chgk.net/docs.jsonld>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"
+      etag:
+      - '"80ab7ffa35ef6e916e7b6f7cc016051c"'
+    body:
+      encoding: UTF-8
+      string: '[{"id":1,"name":"Чемпионат Южного Кавказа","lastEditDate":"2003-07-25T00:00:00+04:00","dateStart":"2003-07-25T00:00:00+04:00","dateEnd":"2003-07-27T00:00:00+04:00","type":{"id":2,"name":"Обычный"},"season":"\/seasons\/1","orgcommittee":[],"currency":"u","editors":[],"tournamentInRatingBalanced":true,"maiiAegis":false,"maiiRating":false},{"id":2,"name":"Летние
+        зори","lastEditDate":"2003-08-09T00:00:00+04:00","dateStart":"2003-08-09T00:00:00+04:00","dateEnd":"2003-08-09T00:00:00+04:00","type":{"id":2,"name":"Обычный"},"season":"\/seasons\/1","orgcommittee":[],"currency":"u","editors":[],"tournamentInRatingBalanced":true,"maiiAegis":false,"maiiRating":false},{"id":3,"name":"Турнир
+        в Ижевске","lastEditDate":"2003-11-22T00:00:00+03:00","dateStart":"2003-11-22T00:00:00+03:00","dateEnd":"2003-11-24T00:00:00+03:00","type":{"id":2,"name":"Обычный"},"season":"\/seasons\/2","orgcommittee":[],"currency":"u","editors":[],"tournamentInRatingBalanced":true,"maiiAegis":false,"maiiRating":false},{"id":4,"name":"Чемпионат
+        Украины. Переходной этап","lastEditDate":"2003-10-11T00:00:00+04:00","dateStart":"2003-10-11T00:00:00+04:00","dateEnd":"2003-10-12T00:00:00+04:00","type":{"id":2,"name":"Обычный"},"season":"\/seasons\/2","orgcommittee":[],"currency":"u","editors":[],"tournamentInRatingBalanced":true,"maiiAegis":false,"maiiRating":false}]'
+  recorded_at: Mon, 17 Oct 2022 14:46:11 GMT
+recorded_with: VCR 6.1.0

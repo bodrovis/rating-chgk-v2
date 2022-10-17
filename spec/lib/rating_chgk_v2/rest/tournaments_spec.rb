@@ -49,6 +49,14 @@ RSpec.describe RatingChgkV2::Rest::Tournaments do
       expect(tournaments.count).to eq(2)
       expect(tournaments[0].name).to eq('Бостонское чаепитие')
     end
+
+    it 'handles flat params' do
+      tournaments = VCR.use_cassette('tournaments/all_tournaments_params_flat') do
+        test_client.tournaments itemsPerPage: 4, 'type[]': [1, 2, 3]
+      end
+
+      expect(tournaments[0].type['id']).to eq(2)
+    end
   end
 
   specify '#tournament_appeals' do

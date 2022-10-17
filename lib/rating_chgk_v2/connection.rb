@@ -27,7 +27,11 @@ module RatingChgkV2
 
     # Allows to customize request params per-client
     def request_params_for(client)
-      {request: {timeout: client.timeout, open_timeout: client.open_timeout}}
+      {request: {
+        timeout: client.timeout,
+        open_timeout: client.open_timeout,
+        params_encoder: Faraday::FlatParamsEncoder
+      }}
     end
   end
 end
