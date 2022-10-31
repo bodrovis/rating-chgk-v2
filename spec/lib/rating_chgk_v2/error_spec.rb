@@ -6,6 +6,6 @@ RSpec.describe RatingChgkV2::Error do
       VCR.use_cassette('error/error_404') do
         test_client.player(3)
       end
-    end.to raise_error(RatingChgkV2::Error::NotFound)
+    end.to raise_error(RatingChgkV2::Error::NotFound, /Not Found/)
   end
 end
