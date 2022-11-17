@@ -123,4 +123,34 @@ RSpec.describe RatingChgkV2::Rest::Players do
       expect(players.endpoint.params[:itemsPerPage]).to eq(3)
     end
   end
+
+  specify '#update_player' do
+    stub_request(:put, 'https://api.rating.chgk.net/players/0').
+      with(body: {name: 'Акваменов'}).
+      to_return(
+        status: 200,
+        body: '{"id":0,"name":"Акваменов"}',
+        headers: {}
+      )
+
+    player = test_client.update_player 0, name: 'Акваменов'
+    expect(player.name).to eq('Акваменов')
+    expect(player.id).to eq(0)
+  end
+
+  describe '#delete_player' do
+    it 'raises an error when the token is invalid' do
+      expect do
+        VCR.use_cassette('players/delete_player_incorrect_token') do
+          test_client.delete_player 1
+        end
+      end.to raise_error(RatingChgkV2::Error::Unauthorized)
+    end
+
+    it 'delete a player' do
+      stub_request(:delete, 'https://api.rating.chgk.net/players/1').to_return(status: 204, body: '', headers: {})
+
+      expect(test_client.delete_player(1)).to eq('')
+    end
+  end
 end

@@ -56,4 +56,32 @@ RSpec.describe RatingChgkV2::Models::PlayerModel do
       expect(tour.idteam).to eq(7121)
     end
   end
+
+  specify '#update' do
+    player = VCR.use_cassette('players/player') do
+      test_client.player 1110
+    end
+
+    stub_request(:put, 'https://api.rating.chgk.net/players/1110').
+      with(body: {name: 'Изменённое имя'}).
+      to_return(
+        status: 200,
+        body: '{"id":1110,"name":"Изменённое имя"}',
+        headers: {}
+      )
+
+    update_player = player.update name: 'Изменённое имя'
+    expect(update_player).to be_an_instance_of(described_class)
+    expect(update_player.name).to eq('Изменённое имя')
+    expect(update_player.id).to eq(1110)
+  end
+
+  specify '#destroy' do
+    player = VCR.use_cassette('players/player') do
+      test_client.player 1110
+    end
+
+    stub_request(:delete, 'https://api.rating.chgk.net/players/1110').to_return(status: 204, body: '', headers: {})
+    expect(player.destroy).to eq('')
+  end
 end
