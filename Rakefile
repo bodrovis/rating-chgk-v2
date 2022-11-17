@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'rake'
+require 'rake/clean'
 require 'rspec/core/rake_task'
 require 'rubocop/rake_task'
 
@@ -18,13 +19,9 @@ RuboCop::RakeTask.new do |task|
   task.requires << 'rubocop-rspec'
 end
 
-namespace :chgk do
-  desc 'Removes old .gem files'
-  task :clean do
-    puts 'Removing old gems'
-    rm FileList['./*.gem']
-  end
+CLOBBER.include(FileList['./*.gem'])
 
+namespace :chgk do
   desc 'Updates RubyGems, installs dependencies'
   task :install do
     puts 'Running bundle install'
@@ -41,6 +38,6 @@ end
 
 task rubospec: %w[rubocop spec]
 
-task full_build: %w[chgk:clean chgk:install chgk:build]
+task full_build: %w[clobber chgk:install chgk:build]
 
 task default: :full_build
