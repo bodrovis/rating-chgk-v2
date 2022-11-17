@@ -94,4 +94,38 @@ RSpec.describe RatingChgkV2::Rest::Tournaments do
     expect(results.synchRequest['id']).to eq(103_475)
     expect(results.position).to eq(1)
   end
+
+  specify '#create_tournament_result' do
+    stub_request(:post, 'https://api.rating.chgk.net/tournaments/1/results').
+    with(body: {team: "123", position: 2}).
+    to_return(
+      status: 200,
+      body: '{"team": {"id": 0, "name": "123"}, "position": 2}',
+      headers: {}
+    )
+
+    result = test_client.create_tournament_result 1, team: "123", position: 2
+    expect(result.team['name']).to eq('123')
+    expect(result.position).to eq(2)
+  end
+
+  specify '#update_tournament_result' do
+    stub_request(:put, 'https://api.rating.chgk.net/tournaments/1/results').
+    with(body: {team: "123", position: 3}).
+    to_return(
+      status: 200,
+      body: '{"team": {"id": 0, "name": "test"}, "position": 3}',
+      headers: {}
+    )
+
+    result = test_client.update_tournament_result 1, team: "123", position: 3
+    expect(result.team['name']).to eq('test')
+    expect(result.position).to eq(3)
+  end
+
+  specify '#delete_tournament_result' do
+    stub_request(:delete, 'https://api.rating.chgk.net/tournaments/1/results').to_return(status: 204, body: '', headers: {})
+
+    expect(test_client.delete_tournament_result(1)).to eq('')
+  end
 end

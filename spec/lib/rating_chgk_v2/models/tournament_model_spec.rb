@@ -40,6 +40,29 @@ RSpec.describe RatingChgkV2::Models::TournamentModel do
     expect(results.position).to eq(1)
   end
 
+  specify '#create_result' do
+    stub_request(:get, 'https://api.rating.chgk.net/tournaments/7798').
+    to_return(
+      status: 200,
+      body: '{"id":7798,"name":"Игры доброй воли"}',
+      headers: {}
+    )
+
+    stub_request(:post, 'https://api.rating.chgk.net/tournaments/7798/results').
+    with(body: {team: "123", position: 2}).
+    to_return(
+      status: 200,
+      body: JSON.dump({team: {id: 0, name: "test"}, position: 2}),
+      headers: {}
+    )
+
+    my_tournament = test_client.tournament(7798)
+    result = my_tournament.create_result team: "123", position: 2
+
+    expect(result.team['name']).to eq('test')
+    expect(result.position).to eq(2)
+  end
+
   it 'works for multiple requests' do
     requests = VCR.use_cassette('tournaments/requests') do
       tournament.requests

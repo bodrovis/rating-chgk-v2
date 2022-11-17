@@ -22,6 +22,18 @@ module RatingChgkV2
       def tournament_results(id, params = {})
         collection_load name: 'TournamentResults', ep_name: 'Tournaments', ep_params: [[id, :results], params]
       end
+
+      def create_tournament_result(id, params)
+        model_load name: 'TournamentResult', ep_name: 'Tournaments', ep_params: [[id, :results], params], method: :do_post
+      end
+
+      def update_tournament_result(id, params)
+        model_load name: 'TournamentResult', ep_name: 'Tournaments', ep_params: [[id, :results], params], method: :do_put
+      end
+
+      def delete_tournament_result(id)
+        endpoint('Tournaments', [id, :results]).do_delete
+      end
     end
   end
 end
