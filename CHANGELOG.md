@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+* Added `create_result` method for the `Tournament` model and `create_tournament_result`, `update_tournament_result`, `delete_tournament_result` methods.
+* Added `update` and `destroy` methods for the `Player` model as well as `update_player` and `delete_player` methods (thanks, @DasRegal)
+
 ## 1.2.0 (17-Oct-22)
 
 * Properly handle flat params:

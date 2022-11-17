@@ -24,11 +24,13 @@ module RatingChgkV2
       end
 
       def create_tournament_result(id, params)
-        model_load name: 'TournamentResult', ep_name: 'Tournaments', ep_params: [[id, :results], params], method: :do_post
+        model_load name: 'TournamentResult', ep_name: 'Tournaments', ep_params: [[id, :results], params],
+                   method: :do_post
       end
 
       def update_tournament_result(id, params)
-        model_load name: 'TournamentResult', ep_name: 'Tournaments', ep_params: [[id, :results], params], method: :do_put
+        model_load name: 'TournamentResult', ep_name: 'Tournaments', ep_params: [[id, :results], params],
+                   method: :do_put
       end
 
       def delete_tournament_result(id)
