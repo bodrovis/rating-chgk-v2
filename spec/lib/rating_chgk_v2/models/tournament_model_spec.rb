@@ -2,7 +2,7 @@
 
 RSpec.describe RatingChgkV2::Models::TournamentModel do
   let(:tournament_id) { 7798 }
-  let(:tournament) do
+  let!(:tournament) do
     VCR.use_cassette('tournaments/tournament') do
       test_client.tournament(tournament_id)
     end
@@ -41,13 +41,6 @@ RSpec.describe RatingChgkV2::Models::TournamentModel do
   end
 
   specify '#create_result' do
-    stub_request(:get, 'https://api.rating.chgk.net/tournaments/7798').
-      to_return(
-        status: 200,
-        body: '{"id":7798,"name":"Игры доброй воли"}',
-        headers: {}
-      )
-
     stub_request(:post, 'https://api.rating.chgk.net/tournaments/7798/results').
       with(body: {team: '123', position: 2}).
       to_return(
@@ -56,8 +49,7 @@ RSpec.describe RatingChgkV2::Models::TournamentModel do
         headers: {}
       )
 
-    my_tournament = test_client.tournament(7798)
-    result = my_tournament.create_result team: '123', position: 2
+    result = tournament.create_result team: '123', position: 2
 
     expect(result.team['name']).to eq('test')
     expect(result.position).to eq(2)

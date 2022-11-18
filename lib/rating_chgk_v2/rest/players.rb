@@ -19,6 +19,10 @@ module RatingChgkV2
         collection_load name: 'PlayerTournaments', ep_name: 'Players', ep_params: [[id, :tournaments], params]
       end
 
+      def create_player(params)
+        model_load name: 'Player', ep_name: 'Players', ep_params: [[], params], method: :do_post
+      end
+
       def update_player(id, params)
         model_load name: 'Player', ep_name: 'Players', ep_params: [id, params], method: :do_put
       end

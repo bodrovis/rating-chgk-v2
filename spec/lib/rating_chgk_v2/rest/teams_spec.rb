@@ -63,4 +63,38 @@ RSpec.describe RatingChgkV2::Rest::Teams do
       expect(tour.idteam).to eq(team_id)
     end
   end
+
+  specify '#create_team' do
+    stub_request(:post, 'https://api.rating.chgk.net/teams').
+      with(body: {name: 'Команда А'}).
+      to_return(
+        status: 200,
+        body: '{"id":0,"name":"Команда А"}',
+        headers: {}
+      )
+
+    team = test_client.create_team name: 'Команда А'
+    expect(team.name).to eq('Команда А')
+    expect(team.id).to eq(0)
+  end
+
+  specify '#update_team' do
+    stub_request(:put, 'https://api.rating.chgk.net/teams/0').
+      with(body: {name: 'Команда Ы'}).
+      to_return(
+        status: 200,
+        body: '{"id":0,"name":"Команда Ы"}',
+        headers: {}
+      )
+
+    team = test_client.update_team 0, name: 'Команда Ы'
+    expect(team.name).to eq('Команда Ы')
+    expect(team.id).to eq(0)
+  end
+
+  specify '#delete_team' do
+    stub_request(:delete, 'https://api.rating.chgk.net/teams/0').to_return(status: 204, body: '', headers: {})
+
+    expect(test_client.delete_team(0)).to eq('')
+  end
 end

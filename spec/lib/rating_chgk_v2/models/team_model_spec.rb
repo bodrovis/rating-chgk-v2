@@ -2,10 +2,31 @@
 
 RSpec.describe RatingChgkV2::Models::TeamModel do
   let(:team_id) { 2 }
-  let(:team) do
+  let!(:team) do
     VCR.use_cassette('teams/team') do
       test_client.team(team_id)
     end
+  end
+
+  specify '#update' do
+    stub_request(:put, 'https://api.rating.chgk.net/teams/2').
+      with(body: {name: 'Обновлённая команда'}).
+      to_return(
+        status: 200,
+        body: '{"id":2,"name":"Обновлённая команда"}',
+        headers: {}
+      )
+
+    updated_team = team.update name: 'Обновлённая команда'
+    expect(updated_team).to be_an_instance_of(described_class)
+    expect(updated_team.name).to eq('Обновлённая команда')
+    expect(updated_team.id).to eq(2)
+  end
+
+  specify '#destroy' do
+    stub_request(:delete, 'https://api.rating.chgk.net/teams/2').to_return(status: 204, body: '', headers: {})
+
+    expect(team.destroy).to eq('')
   end
 
   describe '#seasons' do

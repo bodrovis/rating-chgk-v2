@@ -124,6 +124,20 @@ RSpec.describe RatingChgkV2::Rest::Players do
     end
   end
 
+  specify '#create_player' do
+    stub_request(:post, 'https://api.rating.chgk.net/players').
+      with(body: {name: 'Геральт'}).
+      to_return(
+        status: 200,
+        body: '{"id":0,"name":"Геральт"}',
+        headers: {}
+      )
+
+    player = test_client.create_player name: 'Геральт'
+    expect(player.name).to eq('Геральт')
+    expect(player.id).to eq(0)
+  end
+
   specify '#update_player' do
     stub_request(:put, 'https://api.rating.chgk.net/players/0').
       with(body: {name: 'Акваменов'}).
@@ -147,7 +161,7 @@ RSpec.describe RatingChgkV2::Rest::Players do
       end.to raise_error(RatingChgkV2::Error::Unauthorized)
     end
 
-    it 'delete a player' do
+    it 'deletes a player' do
       stub_request(:delete, 'https://api.rating.chgk.net/players/1').to_return(status: 204, body: '', headers: {})
 
       expect(test_client.delete_player(1)).to eq('')

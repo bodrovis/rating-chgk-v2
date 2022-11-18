@@ -32,7 +32,7 @@ namespace :chgk do
   desc 'Builds the gem'
   task :build do
     puts 'Building'
-    sh 'gem build fun_translations.gemspec'
+    sh 'gem build rating-chgk-v2.gemspec'
   end
 end
 

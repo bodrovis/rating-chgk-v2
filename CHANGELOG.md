@@ -1,9 +1,12 @@
 # Changelog
 
-## Unreleased
+## 1.3.0 (18-Nov-22)
 
 * Added `create_result` method for the `Tournament` model and `create_tournament_result`, `update_tournament_result`, `delete_tournament_result` methods.
 * Added `update` and `destroy` methods for the `Player` model as well as `update_player` and `delete_player` methods (thanks, @DasRegal)
+* Added `create_player` method.
+* Added `create_team`, `update_team`, and `delete_team` methods.
+* Added `update` and `destroy` method to the `Team` model.
 
 ## 1.2.0 (17-Oct-22)
 
