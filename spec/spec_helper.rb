@@ -9,11 +9,6 @@ SimpleCov.start do
   add_filter '.github/'
 end
 
-if ENV['CI'] == 'true'
-  require 'codecov'
-  SimpleCov.formatter = SimpleCov::Formatter::Codecov
-end
-
 require 'rating_chgk_v2'
 
 # Support files
