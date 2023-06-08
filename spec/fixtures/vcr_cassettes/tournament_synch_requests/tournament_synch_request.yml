@@ -10,7 +10,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - rating-chgk-v2 gem/1.0.1
+      - rating-chgk-v2 gem/1.3.0
       Content-type:
       - application/json
       Accept-Encoding:
@@ -21,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       server:
-      - nginx/1.14.0 (Ubuntu)
+      - nginx/1.18.0 (Ubuntu)
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -34,17 +34,19 @@ http_interactions:
       - nosniff
       x-frame-options:
       - deny
+      accept-patch:
+      - application/merge-patch+json
       cache-control:
       - no-cache, private
       date:
-      - Fri, 29 Jul 2022 10:21:06 GMT
+      - Thu, 08 Jun 2023 20:18:40 GMT
       link:
       - <https://api.rating.chgk.net/docs.jsonld>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"
       etag:
-      - '"c673ac7cea40e6108cb69208f6d173ba"'
+      - '"04874e69e763958610bcc7e929fc49ef"'
     body:
       encoding: UTF-8
       string: '{"id":1000,"status":"A","venue":{"id":3153,"name":"Павлодар","town":{"id":1680,"name":"Павлодар","region":{"id":111,"name":"Павлодарская
-        область","country":{"id":13,"name":"Казахстан"}},"country":{"id":13,"name":"Казахстан"}},"type":{"id":1,"name":"Постоянная"},"address":null,"urls":[]},"representative":{"id":62769,"name":"Айбек","patronymic":"Каирбекович","surname":"Сакенов"},"narrators":[{"id":78247,"name":"Ольга","patronymic":"","surname":"Логвиненко"}],"approximateTeamsCount":null,"issuedAt":"2012-09-21T10:30:14+04:00","dateStart":"2012-10-13T17:00:00+04:00","tournamentId":2180}'
-  recorded_at: Fri, 29 Jul 2022 10:21:06 GMT
+        область","country":{"id":13,"name":"Казахстан"}},"country":{"id":13,"name":"Казахстан"}},"type":{"id":1,"name":"Постоянная"},"urls":[]},"representative":{"id":62769,"name":"Айбек","patronymic":"Каирбекович","surname":"Сакенов","dbChgkInfoTag":""},"narrator":{"id":78247,"name":"Ольга","patronymic":"","surname":"Логвиненко","dbChgkInfoTag":""},"issuedAt":"2012-09-21T10:30:14+04:00","dateStart":"2012-10-13T17:00:00+04:00","narrators":[{"id":78247,"name":"Ольга","patronymic":"","surname":"Логвиненко","dbChgkInfoTag":""}],"tournamentId":2180}'
+  recorded_at: Thu, 08 Jun 2023 20:18:40 GMT
 recorded_with: VCR 6.1.0

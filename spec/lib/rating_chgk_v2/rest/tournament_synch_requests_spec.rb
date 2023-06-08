@@ -12,7 +12,7 @@ RSpec.describe RatingChgkV2::Rest::TournamentSynchRequests do
     expect(req.status).to eq('A')
     expect(req.venue['name']).to eq('Павлодар')
     expect(req.representative['name']).to eq('Айбек')
-    expect(req.narrators.first['surname']).to eq('Логвиненко')
+    expect(req.narrator['surname']).to eq('Логвиненко')
     expect(req.approximateTeamsCount).to be_nil
     expect(req.issuedAt).to eq('2012-09-21T10:30:14+04:00')
     expect(req.tournamentId).to eq(2180)
