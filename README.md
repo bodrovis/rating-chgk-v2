@@ -2,6 +2,8 @@
 
 ![Gem](https://img.shields.io/gem/v/rating-chgk-v2)
 ![CI](https://github.com/bodrovis/rating-chgk-v2/actions/workflows/ci.yml/badge.svg)
+[![Coverage Status](https://coveralls.io/repos/github/bodrovis/rating-chgk-v2/badge.svg?branch=master)](https://coveralls.io/github/bodrovis/rating-chgk-v2?branch=master)
+![Downloads total](https://img.shields.io/gem/dt/rating-chgk-v2)
 
 Ruby client for [competitive "What? Where? When?" (aka "CHGK") API](http://api.rating.chgk.net/). This gem is a replacement for [ChgkRating](https://github.com/bodrovis/ChgkRating) which worked only with the deprecated API version.
 
