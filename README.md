@@ -57,4 +57,4 @@ Observe test results and coverage.
 
 Licensed under the [MIT license](./LICENSE.md).
 
-Copyright (c) 2022 [Ilya Bodrov-Krukowski](http://bodrovis.tech)
+Copyright (c) 2023 [Ilya Bodrov-Krukowski](http://bodrovis.tech)

@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.4.0 (09-Jun-23)
+
+* Renamed `narrators` method to `narrator` for `TournamentSynchRequests` (thanks, @L-Eugene)
+
 ## 1.3.0 (18-Nov-22)
 
 * Added `create_result` method for the `Tournament` model and `create_tournament_result`, `update_tournament_result`, `delete_tournament_result` methods.
