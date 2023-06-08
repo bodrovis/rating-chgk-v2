@@ -47,3 +47,6 @@ RSpec/ExampleLength:
 
 RSpec/MessageSpies:
   EnforcedStyle: have_received
+
+Gemspec/DevelopmentDependencies:
+  EnforcedStyle: gemspec
