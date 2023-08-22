@@ -16,8 +16,7 @@ module RatingChgkV2
       headers = {
         accept: 'application/json',
         user_agent: "rating-chgk-v2 gem/#{RatingChgkV2::VERSION}",
-        'Content-Type': 'application/json',
-        accept_encoding: 'gzip,deflate,br'
+        'Content-Type': 'application/json'
       }
 
       headers = headers.merge({Authorization: "Bearer #{client.token}"}) if client.token
