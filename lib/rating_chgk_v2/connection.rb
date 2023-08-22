@@ -19,7 +19,7 @@ module RatingChgkV2
         'Content-Type': 'application/json'
       }
 
-      headers = headers.merge({Authorization: "Bearer #{client.token}"}) unless client.token.empty?
+      headers = headers.merge({Authorization: "Bearer #{client.token}"}) unless client.token.to_s.empty?
 
       {headers: headers, url: BASE_URL}
     end
