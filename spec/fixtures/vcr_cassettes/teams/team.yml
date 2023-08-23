@@ -10,41 +10,51 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - rating-chgk-v2 gem/1.0.0.alpa1
-      Content-Type:
+      - rating-chgk-v2 gem/1.5.0
+      Content-type:
       - application/json
       Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      - gzip,deflate,br
   response:
     status:
       code: 200
       message: OK
     headers:
-      Server:
-      - nginx/1.14.0 (Ubuntu)
-      Content-Type:
+      server:
+      - nginx/1.18.0 (Ubuntu)
+      content-type:
       - application/json; charset=utf-8
-      Transfer-Encoding:
+      transfer-encoding:
       - chunked
-      Connection:
+      connection:
       - keep-alive
-      Vary:
-      - Accept
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - deny
-      Cache-Control:
+      vary:
+      - Accept-Encoding, Accept
+      x-powered-by:
+      - PHP/8.2.9
+      x-content-type-options:
+      - nosniff, nosniff
+      x-frame-options:
+      - deny, SAMEORIGIN
+      accept-patch:
+      - application/merge-patch+json
+      cache-control:
       - no-cache, private
-      Date:
-      - Tue, 22 Feb 2022 19:57:16 GMT
-      Link:
+      date:
+      - Wed, 23 Aug 2023 10:11:02 GMT
+      link:
       - <https://api.rating.chgk.net/docs.jsonld>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"
-      Etag:
-      - '"782c3caffd66d44ddd203f628c0550ec"'
+      etag:
+      - W/"782c3caffd66d44ddd203f628c0550ec"
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-xss-protection:
+      - 1; mode=block
     body:
       encoding: ASCII-8BIT
       string: !binary |-
         eyJpZCI6MiwibmFtZSI6ItCQ0YTQuNC90LAiLCJ0b3duIjp7ImlkIjoyMDEsIm5hbWUiOiLQnNC+0YHQutCy0LAiLCJyZWdpb24iOnsiaWQiOjkwLCJuYW1lIjoi0JzQvtGB0LrQstCwIiwiY291bnRyeSI6eyJpZCI6MjEsIm5hbWUiOiLQoNC+0YHRgdC40Y8ifX0sImNvdW50cnkiOnsiaWQiOjIxLCJuYW1lIjoi0KDQvtGB0YHQuNGPIn19fQ==
-  recorded_at: Tue, 22 Feb 2022 19:57:16 GMT
-recorded_with: VCR 6.0.0
+    adapter_metadata:
+      vcr_decompressed: gzip
+  recorded_at: Wed, 23 Aug 2023 10:11:02 GMT
+recorded_with: VCR 6.2.0

@@ -3,6 +3,7 @@
 require 'zeitwerk'
 require 'yaml'
 require 'faraday'
+require 'faraday/gzip'
 require 'addressable/template'
 require 'forwardable'
 

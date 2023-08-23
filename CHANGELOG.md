@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.5.0 (23-Aug-23)
+
+* Fixed authorization header sending (thanks, @L-Eugene)
+* Added proper support for compression and fixed processing
+
 ## 1.4.0 (09-Jun-23)
 
 * Renamed `narrators` method to `narrator` for `TournamentSynchRequests` (thanks, @L-Eugene)
