@@ -24,7 +24,7 @@ module RatingChgkV2
       end
 
       def update_player(id, params)
-        model_load name: 'Player', ep_name: 'Players', ep_params: [id, params], method: :do_put
+        model_load name: 'Player', ep_name: 'Players', ep_params: [id, params], method: :do_patch
       end
 
       def delete_player(id)

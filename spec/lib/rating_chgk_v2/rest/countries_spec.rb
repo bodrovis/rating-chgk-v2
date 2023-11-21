@@ -53,7 +53,7 @@ RSpec.describe RatingChgkV2::Rest::Countries do
   end
 
   specify '#update_country' do
-    stub_request(:put, 'https://api.rating.chgk.net/countries/0').
+    stub_request(:patch, 'https://api.rating.chgk.net/countries/0').
       with(body: {name: 'Лирия'}).
       to_return(
         status: 200,

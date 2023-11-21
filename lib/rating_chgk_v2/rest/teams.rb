@@ -24,7 +24,7 @@ module RatingChgkV2
       end
 
       def update_team(id, params)
-        model_load name: 'Team', ep_name: 'Teams', ep_params: [id, params], method: :do_put
+        model_load name: 'Team', ep_name: 'Teams', ep_params: [id, params], method: :do_patch
       end
 
       def delete_team(id)

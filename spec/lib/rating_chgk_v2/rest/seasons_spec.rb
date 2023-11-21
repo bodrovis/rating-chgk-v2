@@ -48,7 +48,7 @@ RSpec.describe RatingChgkV2::Rest::Seasons do
       dateEnd: '2021-02-05T19:37:45.004Z'
     }
 
-    stub_request(:put, 'https://api.rating.chgk.net/seasons/0').
+    stub_request(:patch, 'https://api.rating.chgk.net/seasons/0').
       with(body: data).
       to_return(
         status: 200,

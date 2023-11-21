@@ -16,7 +16,7 @@ module RatingChgkV2
       end
 
       def update_season(id, params)
-        model_load name: 'Season', ep_name: 'Seasons', ep_params: [id, params], method: :do_put
+        model_load name: 'Season', ep_name: 'Seasons', ep_params: [id, params], method: :do_patch
       end
 
       def delete_season(id)

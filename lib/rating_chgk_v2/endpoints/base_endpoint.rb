@@ -7,6 +7,8 @@ module RatingChgkV2
 
       attr_reader :params
 
+      HTTP_METHODS = %i[get post put delete patch].freeze
+
       def initialize(client, query_params = [], params = {})
         @instance_query = base_query.push(*query_params)
         setup client, @instance_query, params
@@ -19,23 +21,15 @@ module RatingChgkV2
         self
       end
 
-      private
-
-      HTTP_METHODS_REGEXP = /\Ado_(get|post|put|delete)\z/.freeze
-
-      def respond_to_missing?(method, _include_all)
-        return true if HTTP_METHODS_REGEXP.match?(method.to_s)
-
-        super
-      end
-
-      def method_missing(method, *_args)
-        if method.to_s =~ HTTP_METHODS_REGEXP
-          send Regexp.last_match(1), @uri, @client, @params
-        else
-          super
+      # Creates methods like `do_post`, `do_get` that proxy calls to the
+      # corresponding methods in the `Request` module
+      HTTP_METHODS.each do |method_postfix|
+        define_method "do_#{method_postfix}" do
+          send method_postfix, @uri, @client, @params
         end
       end
+
+      private
 
       def setup(client, query_params = [], params = {})
         @query_params = query_params

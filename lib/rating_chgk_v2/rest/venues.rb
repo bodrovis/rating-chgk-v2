@@ -16,7 +16,7 @@ module RatingChgkV2
       end
 
       def update_venue(id, params)
-        model_load name: 'Venue', ep_name: 'Venues', ep_params: [id, params], method: :do_put
+        model_load name: 'Venue', ep_name: 'Venues', ep_params: [id, params], method: :do_patch
       end
 
       def delete_venue(id)

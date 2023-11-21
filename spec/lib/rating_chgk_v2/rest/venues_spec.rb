@@ -50,7 +50,7 @@ RSpec.describe RatingChgkV2::Rest::Venues do
   end
 
   specify '#update_venue' do
-    stub_request(:put, 'https://api.rating.chgk.net/venues/0').
+    stub_request(:patch, 'https://api.rating.chgk.net/venues/0').
       with(body: {name: 'Обновлённая'}).
       to_return(
         status: 200,

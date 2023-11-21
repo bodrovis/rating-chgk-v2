@@ -16,7 +16,7 @@ module RatingChgkV2
       end
 
       def update_country(id, params)
-        model_load name: 'Country', ep_name: 'Countries', ep_params: [id, params], method: :do_put
+        model_load name: 'Country', ep_name: 'Countries', ep_params: [id, params], method: :do_patch
       end
 
       def delete_country(id)

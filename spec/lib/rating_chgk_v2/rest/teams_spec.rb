@@ -79,7 +79,7 @@ RSpec.describe RatingChgkV2::Rest::Teams do
   end
 
   specify '#update_team' do
-    stub_request(:put, 'https://api.rating.chgk.net/teams/0').
+    stub_request(:patch, 'https://api.rating.chgk.net/teams/0').
       with(body: {name: 'Команда Ы'}).
       to_return(
         status: 200,

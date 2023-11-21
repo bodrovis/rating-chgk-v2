@@ -139,7 +139,7 @@ RSpec.describe RatingChgkV2::Rest::Players do
   end
 
   specify '#update_player' do
-    stub_request(:put, 'https://api.rating.chgk.net/players/0').
+    stub_request(:patch, 'https://api.rating.chgk.net/players/0').
       with(body: {name: 'Акваменов'}).
       to_return(
         status: 200,

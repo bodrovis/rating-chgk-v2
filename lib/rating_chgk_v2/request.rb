@@ -26,6 +26,13 @@ module RatingChgkV2
       )
     end
 
+    def patch(path, client, params = {})
+      respond_with(
+        connection(client).patch(prepare(path), custom_dump(params)),
+        client
+      )
+    end
+
     def delete(path, client, _params = {})
       respond_with(
         connection(client).delete(prepare(path)),

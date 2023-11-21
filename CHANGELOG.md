@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.6.0 (21-Nov-23)
+
+* Use HTTP PATCH instead of PUT according to the recent API changes
+* Minor code improvements
+* Test with Ruby 3.3
+
 ## 1.5.0 (23-Aug-23)
 
 * Fixed authorization header sending (thanks, @L-Eugene)
