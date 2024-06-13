@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+* Require Ruby 3+
+
 ## 1.6.0 (21-Nov-23)
 
 * Use HTTP PATCH instead of PUT according to the recent API changes

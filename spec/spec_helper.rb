@@ -23,7 +23,7 @@ end
 require 'rating_chgk_v2'
 
 # Support files
-Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].sort.each { |f| require f }
+Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
 
 RSpec.configure do |config|
   config.include TestClient
