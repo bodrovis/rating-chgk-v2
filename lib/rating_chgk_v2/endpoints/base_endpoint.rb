@@ -24,7 +24,7 @@ module RatingChgkV2
       # Creates methods like `do_post`, `do_get` that proxy calls to the
       # corresponding methods in the `Request` module
       HTTP_METHODS.each do |method_postfix|
-        define_method "do_#{method_postfix}" do
+        define_method :"do_#{method_postfix}" do
           send method_postfix, @uri, @client, @params
         end
       end

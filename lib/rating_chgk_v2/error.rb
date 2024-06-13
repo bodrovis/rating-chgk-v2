@@ -46,7 +46,7 @@ module RatingChgkV2
 
     # Initializes a new Error object
     def initialize(message = '')
-      super(message)
+      super
     end
   end
 end
